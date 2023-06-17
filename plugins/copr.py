@@ -146,7 +146,8 @@ class CoprCommand(dnf.cli.Command):
 
         if os.path.isfile(vendor_config_file):
             self._get_copr_chroot(vendor_config_file)
-        self._get_copr_chroot(default_config_file)
+        else:
+            self._get_copr_chroot(default_config_file)
 
         for filename in os.listdir(os.path.join(config_path, PLUGIN_CONF + ".d")):
             if filename.endswith('.conf'):
@@ -214,9 +215,9 @@ class CoprCommand(dnf.cli.Command):
         Sets the Copr root from a config file
         This is refactored from configure() to avoid code duplication
         """
-        copr_plugin_config = ConfigParser()
         if not os.path.isfile(config):
             return
+        copr_plugin_config = ConfigParser()
         copr_plugin_config.read(config)
         if copr_plugin_config.has_option('main', 'distribution') and\
                 copr_plugin_config.has_option('main', 'releasever'):
@@ -461,7 +462,7 @@ Bugzilla. In case of problems, contact the owner of this repository.
             dist = linux_distribution()
         # Get distribution architecture
         distarch = self.base.conf.substitutions['basearch']
-        if any([name in dist for name in ["Fedora", "Fedora Linux"]]):
+        if "Fedora" in dist[0]:
             if "Rawhide" in dist:
                 chroot = ("fedora-rawhide-" + distarch)
             # workaround for enabling repos in Rawhide when VERSION in os-release
@@ -487,7 +488,7 @@ Bugzilla. In case of problems, contact the owner of this repository.
             else:
                 chroot = ("opensuse-leap-{0}-{1}".format(dist[1], distarch))
         else:
-            chroot = ("epel-%s-x86_64" % dist[1].split(".", 1)[0])
+            chroot = ("epel-{}-{}".format(dist[1].split(".", 1)[0], distarch if distarch else "x86_64"))
         return chroot
 
     def _download_repo(self, project_name, repo_filename):
