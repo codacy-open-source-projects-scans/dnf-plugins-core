@@ -1,0 +1,6 @@
+To run tests from the source tree, run this
+(working directory = root of the source tree):
+
+export PYTHONPATH=./plugins
+python3 -m unittest discover -t . -s tests/
+

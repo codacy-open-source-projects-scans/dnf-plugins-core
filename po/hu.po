@@ -1,0 +1,1627 @@
+# Meskó Balázs <meskobalazs@gmail.com>, 2016. #zanata
+# Meskó Balázs <meskobalazs@gmail.com>, 2017. #zanata
+# Zoltan Hoppar <zoltanh721@fedoraproject.org>, 2017. #zanata
+# Meskó Balázs <meskobalazs@gmail.com>, 2018. #zanata
+# Meskó Balázs <meskobalazs@gmail.com>, 2019. #zanata
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2021, 2022, 2023.
+# Dankaházi (ifj.) István <dankahazi.istvan@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-20 01:38+0000\n"
+"PO-Revision-Date: 2023-01-17 09:20+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
+"Language-Team: Hungarian <https://translate.fedoraproject.org/projects/dnf/dnf-plugins-core-l10n-master/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15\n"
+
+#: plugins/builddep.py:45
+msgid "[PACKAGE|PACKAGE.spec]"
+msgstr "[CSOMAG|CSOMAG.spec]"
+
+#: plugins/builddep.py:85
+#, python-format
+msgid "'%s' is not of the format 'MACRO EXPR'"
+msgstr "a(z) „%s” nem „MACRO EXPR” formátumú"
+
+#: plugins/builddep.py:90
+msgid "packages with builddeps to install"
+msgstr "az építési függőségekkel rendelkező telepítendő csomagok"
+
+#: plugins/builddep.py:93
+msgid "define a macro for spec file parsing"
+msgstr "határozzon meg egy makrót a specifikációs fájl feldolgozáshoz"
+
+#: plugins/builddep.py:95
+msgid "skip build dependencies not available in repositories"
+msgstr "a tárolóban nem található összeállítási függőségek kihagyása"
+
+#: plugins/builddep.py:98
+msgid "treat commandline arguments as spec files"
+msgstr "a parancssori argumentumok spec fájlokként történő kezelése"
+
+#: plugins/builddep.py:100
+msgid "treat commandline arguments as source rpm"
+msgstr "a parancssori argumentumok forrás rpm-ként történő kezelése"
+
+#: plugins/builddep.py:144
+msgid "RPM: {}"
+msgstr "RPM: {}"
+
+#: plugins/builddep.py:153
+msgid "Some packages could not be found."
+msgstr "Néhány csomag nem található."
+
+#. No provides, no files
+#. Richdeps can have no matches but it could be correct (solver must decide
+#. later)
+#: plugins/builddep.py:173
+#, python-format
+msgid "No matching package to install: '%s'"
+msgstr "Nincs egyező csomag a(z) „%s” telepítéséhez"
+
+#: plugins/builddep.py:191
+#, python-format
+msgid "Failed to open: '%s', not a valid source rpm file."
+msgstr "A(z) „%s” megnyitása sikertelen, nem érvényes forrás rpm fájl."
+
+#: plugins/builddep.py:204 plugins/builddep.py:224 plugins/builddep.py:241
+msgid "Not all dependencies satisfied"
+msgstr "Nincs minden függőség kielégítve"
+
+#: plugins/builddep.py:208
+msgid ""
+"Warning: -D or --define arguments have no meaning for source rpm packages."
+msgstr ""
+"Figyelmeztetés: a -D vagy a --define argumentumoknak nincs jelentésük a "
+"forrás rpm csomagoknál."
+
+#: plugins/builddep.py:215
+#, python-format
+msgid "Failed to open: '%s', not a valid spec file: %s"
+msgstr ""
+"A(z) „%s” megnyitása sikertelen, nem egy érvényes specifikációs fájl: %s"
+
+#: plugins/builddep.py:234 plugins/repoclosure.py:124
+#, python-format
+msgid "no package matched: %s"
+msgstr "nincs egyező csomag: %s"
+
+#: plugins/changelog.py:37
+#, python-brace-format
+msgid "Not a valid date: \"{0}\"."
+msgstr "Érvénytelen dátum: „{0}”."
+
+#: plugins/changelog.py:43
+msgid "Show changelog data of packages"
+msgstr "A csomagok változásnapló adatainak megjelenítése"
+
+#: plugins/changelog.py:51
+msgid ""
+"show changelog entries since DATE. To avoid ambiguosity, YYYY-MM-DD format "
+"is recommended."
+msgstr ""
+"változásnapló bejegyzések megtekintése a DÁTUM óta. A többértelműség "
+"elkerülése érdekében YYYY-MM-DD formátum javasolt."
+
+#: plugins/changelog.py:55
+msgid "show given number of changelog entries per package"
+msgstr "a megadott számú változásnapló-bejegyzés megjelenítése csomagonként"
+
+#: plugins/changelog.py:58
+msgid ""
+"show only new changelog entries for packages, that provide an upgrade for "
+"some of already installed packages."
+msgstr ""
+"csak azon új változásnapló-bejegyzések megjelenítése, amelyek frissítést "
+"jelentenek a már telepített csomagokhoz képest."
+
+#: plugins/changelog.py:60
+msgid "PACKAGE"
+msgstr "CSOMAG"
+
+#: plugins/changelog.py:81 plugins/debuginfo-install.py:90
+#, python-format
+msgid "No match for argument: %s"
+msgstr "Nem található egyezés a következő argumentumra: %s"
+
+#: plugins/changelog.py:109
+msgid "Listing changelogs since {}"
+msgstr "Változásnapló-bejegyzések megjelenítése {} óta"
+
+#: plugins/changelog.py:111
+msgid "Listing only latest changelog"
+msgid_plural "Listing {} latest changelogs"
+msgstr[0] "Csak a legfrissebb változásnapló-bejegyzés megjelenítése"
+msgstr[1] "Csak a legfrissebb {} változásnapló-bejegyzés megjelenítése"
+
+#: plugins/changelog.py:116
+msgid "Listing only new changelogs since installed version of the package"
+msgstr ""
+"Csak a csomag telepített verziójánál újabb változásnapló-bejegyzések "
+"megjelenítése"
+
+#: plugins/changelog.py:118
+msgid "Listing all changelogs"
+msgstr "Összes változásnapló megjelenítése"
+
+#: plugins/changelog.py:122
+msgid "Changelogs for {}"
+msgstr "Változásnaplók ehhez: {}"
+
+#: plugins/config_manager.py:38
+#, python-brace-format
+msgid "manage {prog} configuration options and repositories"
+msgstr "a(z) {prog} konfigurációs beállítások és tárolók kezelése"
+
+#: plugins/config_manager.py:45
+msgid "configuration sections to manage, \"main\" or repoid"
+msgstr ""
+
+#: plugins/config_manager.py:48
+msgid "save the current options (useful with --setopt)"
+msgstr "a jelenlegi beállítások mentése (a --setopt kapcsolóval hasznos)"
+
+#: plugins/config_manager.py:51
+msgid "add (and enable) the repo from the specified file or url"
+msgstr "hozzáadja (és engedélyezi) a tárolót a megadott fájlból vagy URL-ből"
+
+#: plugins/config_manager.py:54
+msgid "print current configuration values to stdout"
+msgstr "kiírja a jelenlegi konfigurációs értékeket a sztenderd kimenetre"
+
+#: plugins/config_manager.py:57
+msgid "print variable values to stdout"
+msgstr "kiírja a változó értékeket a sztenderd kimenetre"
+
+#: plugins/config_manager.py:61
+msgid "enable repos (automatically saves)"
+msgstr "tárolók engedélyezése (automatikusan mentés)"
+
+#: plugins/config_manager.py:64
+msgid "disable repos (automatically saves)"
+msgstr "tárolók tiltása (automatikusan mentés)"
+
+#: plugins/config_manager.py:78
+msgid "one of the following arguments is required: {}"
+msgstr "a következő argumentumok egyike szüksége: {}"
+
+#: plugins/config_manager.py:87
+msgid ""
+"Warning: --enablerepo/--disablerepo arguments have no meaningwith config "
+"manager. Use --set-enabled/--set-disabled instead."
+msgstr ""
+"Figyelem: az --enablerepo/--disablerepo argumentumoknak nincs értelme a "
+"konfigurációkezelővel. Használja inkább a --set-enabled/--set-disabled "
+"kapcsolókat."
+
+#: plugins/config_manager.py:134
+#, python-format
+msgid "No matching repo to modify: %s."
+msgstr "Nincs egyező módosítandó tároló: %s."
+
+#: plugins/config_manager.py:185
+#, python-format
+msgid "Adding repo from: %s"
+msgstr "Tároló hozzáadása innen: %s"
+
+#: plugins/config_manager.py:209
+msgid "Configuration of repo failed"
+msgid_plural "Configuration of repos failed"
+msgstr[0] "A tároló beállítása meghiúsult"
+msgstr[1] "A tárolók beállítása meghiúsult"
+
+#: plugins/config_manager.py:219
+#, python-format
+msgid "Could not save repo to repofile %s: %s"
+msgstr "A tároló nem menthető a(z) %s tárolófájlba: %s"
+
+#: plugins/copr.py:70
+msgid "y"
+msgstr "i"
+
+#: plugins/copr.py:70
+msgid "yes"
+msgstr "igen"
+
+#: plugins/copr.py:71
+msgid "n"
+msgstr "n"
+
+#: plugins/copr.py:71
+msgid "no"
+msgstr "nem"
+
+#: plugins/copr.py:92
+msgid "Interact with Copr repositories."
+msgstr "Együttműködés a Copr tárolókkal."
+
+#: plugins/copr.py:94
+msgid ""
+"\n"
+"  enable name/project [chroot]\n"
+"  disable name/project\n"
+"  remove name/project\n"
+"  list --installed/enabled/disabled\n"
+"  list --available-by-user=NAME\n"
+"  search project\n"
+"\n"
+"  Examples:\n"
+"  copr enable rhscl/perl516 epel-6-x86_64\n"
+"  copr enable ignatenkobrain/ocltoys\n"
+"  copr disable rhscl/perl516\n"
+"  copr remove rhscl/perl516\n"
+"  copr list --enabled\n"
+"  copr list --available-by-user=ignatenkobrain\n"
+"  copr search tests\n"
+"    "
+msgstr ""
+"\n"
+"  enable név/projekt [chroot]\n"
+"  disable név/projekt\n"
+"  remove név/projekt\n"
+"  list --installed/enabled/disabled\n"
+"  list --avaiable-by-user=NÉV\n"
+"  search projekt\n"
+"\n"
+"  Példák:\n"
+"  copr enable rhscl/perl516 epel-6-x86_64\n"
+"  copr enable ignatenkobrain/ocltoys\n"
+"  copr disable rhscl/perl516\n"
+"  copr remove rhscl/perl516\n"
+"  copr list --enabled\n"
+"  copr list --available-by-user=ignatenkobrain\n"
+"  copr search tests\n"
+"    "
+
+#: plugins/copr.py:120
+msgid "List all installed Copr repositories (default)"
+msgstr "Az összes telepített Copr tároló (alapértelmezett)"
+
+#: plugins/copr.py:122
+msgid "List enabled Copr repositories"
+msgstr "Engedélyezett Copr tárolók"
+
+#: plugins/copr.py:124
+msgid "List disabled Copr repositories"
+msgstr "Letiltott Copr tárolók"
+
+#: plugins/copr.py:126
+msgid "List available Copr repositories by user NAME"
+msgstr "A NÉV felhasználó számára elérhető Copr tárolók"
+
+#: plugins/copr.py:128
+msgid "Specify an instance of Copr to work with"
+msgstr "Adja meg a Copr példányt, amivel dolgozni akar"
+
+#: plugins/copr.py:163 plugins/copr.py:254 plugins/copr.py:281
+msgid "Error: "
+msgstr "Hiba: "
+
+#: plugins/copr.py:164
+msgid ""
+"specify Copr hub either with `--hub` or using "
+"`copr_hub/copr_username/copr_projectname` format"
+msgstr ""
+"adja meg a Copr kiszolgálót a „--hub” kapcsolóval vagy a "
+"„copr_hub/copr_username/copr_projectname” formátummal"
+
+#: plugins/copr.py:167
+msgid "multiple hubs specified"
+msgstr "több kiszolgáló lett megadva"
+
+#: plugins/copr.py:255 plugins/copr.py:259
+msgid "exactly two additional parameters to copr command are required"
+msgstr "pontosan két további paraméter szükséges a copr parancshoz"
+
+#: plugins/copr.py:264
+msgid "Too many arguments."
+msgstr "Túl sok argumentum."
+
+#: plugins/copr.py:267
+msgid ""
+"Bad format of optional chroot. The format is distribution-version-"
+"architecture."
+msgstr ""
+"Hibás formátum a nem kötelező chrootnál. A formátum disztribúció-verzió-"
+"architektúra."
+
+#: plugins/copr.py:282
+msgid "use format `copr_username/copr_projectname` to reference copr project"
+msgstr ""
+"használja a `copr_felhasználónév/copr_projektnév` formátumot a copr "
+"projektre való hivatkozáshoz"
+
+#: plugins/copr.py:284
+msgid "bad copr project format"
+msgstr "hibás copr projektformátum"
+
+#: plugins/copr.py:298
+msgid ""
+"\n"
+"Enabling a Copr repository. Please note that this repository is not part\n"
+"of the main distribution, and quality may vary.\n"
+"\n"
+"The Fedora Project does not exercise any power over the contents of\n"
+"this repository beyond the rules outlined in the Copr FAQ at\n"
+"<https://docs.pagure.org/copr.copr/user_documentation.html#what-i-can-build-in-copr>,\n"
+"and packages are not held to any quality or security level.\n"
+"\n"
+"Please do not file bug reports about these packages in Fedora\n"
+"Bugzilla. In case of problems, contact the owner of this repository.\n"
+msgstr ""
+"\n"
+"Egy Copr tároló engedélyezésére készül. Vegye figyelembe, hogy ez a\n"
+"tároló nem része a fő disztribúciónak, és a minőség változó lehet.\n"
+"\n"
+"A Fedora Projektnek semmilyen hatalma nincs a tároló tartalma felett,\n"
+"a Copr GYIK-ben leírt szabályokon kívül, amely itt található:\n"
+"<https://docs.pagure.org/copr.copr/user_documentation.html#what-i-can-build-in-copr>.\n"
+"A csomagoknál nincs garancia semmilyen minőségi vagy biztonsági szintre.\n"
+"\n"
+"Ne jelentsen be hibákat a Fedora Bugzillába. Problémák esetén keresse\n"
+"a tároló tulajdonosát.\n"
+
+#: plugins/copr.py:315
+msgid "Repository successfully enabled."
+msgstr "Tároló sikeresen engedélyezve."
+
+#: plugins/copr.py:320
+msgid "Repository successfully disabled."
+msgstr "Tároló sikeresen letiltva."
+
+#: plugins/copr.py:324
+msgid "Repository successfully removed."
+msgstr "Tároló sikeresen eltávolítva."
+
+#: plugins/copr.py:328 plugins/copr.py:739
+msgid "Unknown subcommand {}."
+msgstr "Ismeretlen alparancs: {}."
+
+#: plugins/copr.py:385
+msgid ""
+"* These coprs have repo file with an old format that contains no information"
+" about Copr hub - the default one was assumed. Re-enable the project to fix "
+"this."
+msgstr ""
+"* Ezek a Copr tárolók olyan régi formátumú repo fájlokat tartalmaz, "
+"amelyekben nincs információ a Copr kiszolgálóról – az alapértelmezett lett "
+"feltételezve. Engedélyezze újra a projektet a kijavításhoz."
+
+#: plugins/copr.py:398
+msgid "Can't parse repositories for username '{}'."
+msgstr "A tárolók nem értelmezhetőek a(z) „{}” felhasználónévhez."
+
+#: plugins/copr.py:401
+msgid "List of {} coprs"
+msgstr "{} copr tárolók listája"
+
+#: plugins/copr.py:406
+msgid "No description given"
+msgstr "Nincs leírás adva"
+
+#: plugins/copr.py:418
+msgid "Can't parse search for '{}'."
+msgstr "Nem értelmezhető a keresés erre: „{}”."
+
+#: plugins/copr.py:421
+msgid "Matched: {}"
+msgstr "Találat: {}"
+
+#: plugins/copr.py:426
+msgid "No description given."
+msgstr "Nincs leírás adva."
+
+#: plugins/copr.py:448
+msgid "Safe and good answer. Exiting."
+msgstr "Biztonságos és jó válasz. Kilépés."
+
+#: plugins/copr.py:455
+msgid "This command has to be run under the root user."
+msgstr "Ezt a parancsot root felhasználóként kell futtatni."
+
+#: plugins/copr.py:505
+#, python-brace-format
+msgid "Request to {0} failed: {1} - {2}"
+msgstr "A(z) {0} számára küldött kérés sikertelen: {1} – {2}"
+
+#: plugins/copr.py:507
+msgid "It wasn't possible to enable this project.\n"
+msgstr "A projekt engedélyezése nem volt lehetséges.\n"
+
+#: plugins/copr.py:512
+#, python-brace-format
+msgid "Repository '{0}' does not exist in project '{1}'."
+msgstr "A(z) „{0}” tároló nem létezik a(z) „{1}” projektben."
+
+#: plugins/copr.py:515
+msgid ""
+"\n"
+"Available repositories: "
+msgstr ""
+"\n"
+"Elérhető tárolók: "
+
+#: plugins/copr.py:517
+#, python-brace-format
+msgid ""
+"\n"
+"\n"
+"If you want to enable a non-default repository, use the following command:\n"
+"  'dnf copr enable {0} <repository>'\n"
+"But note that the installed repo file will likely need a manual modification."
+msgstr ""
+"\n"
+"\n"
+"Ha egy nem alapértelmezett tárolót akar engedélyezni, használja a következő parancsot:\n"
+"  „dnf copr enable {0} <tároló>”\n"
+"De vegye figyelembe, hogy a telepített tárolónál jó eséllyel kézi módosítás lesz szükséges."
+
+#: plugins/copr.py:523
+#, python-brace-format
+msgid "Project {0} does not exist."
+msgstr "A(z) {0} projekt nem létezik."
+
+#: plugins/copr.py:526
+#, python-brace-format
+msgid "Failed to connect to {0}: {1}"
+msgstr "Nem sikerült kapcsolódni a következőhöz: {0}: {1}"
+
+#: plugins/copr.py:573
+#, python-brace-format
+msgid ""
+"Maintainer of the enabled Copr repository decided to make\n"
+"it dependent on other repositories. Such repositories are\n"
+"usually necessary for successful installation of RPMs from\n"
+"the main Copr repository (they provide runtime dependencies).\n"
+"\n"
+"Be aware that the note about quality and bug-reporting\n"
+"above applies here too, Fedora Project doesn't control the\n"
+"content. Please review the list:\n"
+"\n"
+"{0}\n"
+"\n"
+"These repositories have been enabled automatically."
+msgstr ""
+"Az engedélyezett Copr tároló karbantartója úgy döntött,\n"
+"hogy más tárolóktól függ. Az ilyen tárolók általában a fő\n"
+"Copr tárolóból történő RPM telepítéshez szükségesek\n"
+"(futásidejű függőségeket biztosítanak).\n"
+"\n"
+"Vegye figyelembe, hogy a minőséggel és hibajelzéssel\n"
+"kapcsolatos figyelmeztetés itt is érvényes, nem a Fedora\n"
+"Project irányítja a tartalmat. Nézze át a listát:\n"
+"\n"
+"{0}\n"
+"\n"
+"Ezek a tárolók automatikusan engedélyezve lettek."
+
+#: plugins/copr.py:594
+msgid "Do you want to keep them enabled?"
+msgstr "Továbbra is engedélyezve hagyja őket?"
+
+#: plugins/copr.py:627
+#, python-brace-format
+msgid "Failed to remove copr repo {0}/{1}/{2}"
+msgstr "Nem sikerült a(z) {0}/{1}/{2} copr tároló eltávolítása"
+
+#: plugins/copr.py:638
+msgid "Failed to disable copr repo {}/{}"
+msgstr "Nem sikerült a(z) {}/{} copr tároló letiltása"
+
+#: plugins/copr.py:656 plugins/copr.py:693
+msgid "Unknown response from server."
+msgstr "Ismeretlen válasz a kiszolgálótól."
+
+#: plugins/copr.py:678
+msgid "Interact with Playground repository."
+msgstr "Együttműködés a Playground tárolóval."
+
+#: plugins/copr.py:684
+msgid "Enabling a Playground repository."
+msgstr "A Playground tároló engedélyezése."
+
+#: plugins/copr.py:685
+msgid "Do you want to continue?"
+msgstr "Folytatja?"
+
+#: plugins/copr.py:729
+msgid "Playground repositories successfully enabled."
+msgstr "Playground tárolók sikeresen engedélyezve."
+
+#: plugins/copr.py:732
+msgid "Playground repositories successfully disabled."
+msgstr "Playground tárolók sikeresen letiltva."
+
+#: plugins/copr.py:736
+msgid "Playground repositories successfully updated."
+msgstr "Playground tárolók sikeresen frissítve."
+
+#: plugins/debug.py:53
+msgid "dump information about installed rpm packages to file"
+msgstr "telepített rpm csomagok információinak összegyűjtése egy fájlba"
+
+#: plugins/debug.py:67
+msgid "do not attempt to dump the repository contents."
+msgstr "ne próbálja meg összegyűjteni a tároló tartalmát."
+
+#: plugins/debug.py:70
+msgid "optional name of dump file"
+msgstr "opcionális neve a dump fájlnak"
+
+#: plugins/debug.py:95
+#, python-format
+msgid "Output written to: %s"
+msgstr "Kimenet kiírva ide: %s"
+
+#: plugins/debug.py:172
+msgid "restore packages recorded in debug-dump file"
+msgstr "csomagok helyreállítása a debug-dump fájl bejegyzései alapján"
+
+#: plugins/debug.py:185
+msgid "output commands that would be run to stdout."
+msgstr "a futtatandó parancsok kiírása a szabványos kimenetre."
+
+#: plugins/debug.py:188
+msgid "Install the latest version of recorded packages."
+msgstr "telepítse a legutolsó verzióját a rögzített csomagoknak."
+
+#: plugins/debug.py:191
+msgid ""
+"Ignore architecture and install missing packages matching the name, epoch, "
+"version and release."
+msgstr ""
+"hagyja figyelmen kívül az architektúrát és telepítse a hiányzó csomagokat "
+"amelyeknél egyezik a név, az azonosító, verzió, és a kiadás."
+
+#: plugins/debug.py:196
+msgid "limit to specified type"
+msgstr "limitálja a meghatározott típusokat"
+
+#: plugins/debug.py:199
+msgid ""
+"Allow removing of install-only packages. Using this option may result in an "
+"attempt to remove the running kernel."
+msgstr ""
+"A csak telepíthető csomagok eltávolításának engedélyezése. A kapcsoló "
+"használata a futó kernel törlésének kísérletét eredményezheti."
+
+#: plugins/debug.py:202
+msgid "name of dump file"
+msgstr "a dump fájl neve"
+
+#: plugins/debug.py:273
+#, python-format
+msgid "Package %s is not available"
+msgstr "A(z) %s csomag nem érhető el"
+
+#: plugins/debug.py:283
+#, python-format
+msgid "Bad dnf debug file: %s"
+msgstr "Hibás dnf hibakeresési fájl: %s"
+
+#: plugins/debuginfo-install.py:56
+msgid "install debuginfo packages"
+msgstr "debuginfo csomagok telepítése"
+
+#: plugins/debuginfo-install.py:180
+#, python-format
+msgid ""
+"Could not find debuginfo package for the following available packages: %s"
+msgstr "Nem található debuginfo csomag a következő elérhető csomagokhoz: %s"
+
+#: plugins/debuginfo-install.py:185
+#, python-format
+msgid ""
+"Could not find debugsource package for the following available packages: %s"
+msgstr "Nem található debugsource csomag a következő elérhető csomagokhoz: %s"
+
+#: plugins/debuginfo-install.py:190
+#, python-format
+msgid ""
+"Could not find debuginfo package for the following installed packages: %s"
+msgstr "Nem található debuginfo csomag a következő telepített csomagokhoz: %s"
+
+#: plugins/debuginfo-install.py:195
+#, python-format
+msgid ""
+"Could not find debugsource package for the following installed packages: %s"
+msgstr ""
+"Nem található debugsource csomag a következő telepített csomagokhoz: %s"
+
+#: plugins/debuginfo-install.py:199
+msgid "Unable to find a match"
+msgstr "Nem található egyezés"
+
+#: plugins/download.py:41
+msgid "Download package to current directory"
+msgstr "Csomag letöltése a jelenlegi könyvtárba"
+
+#: plugins/download.py:51
+msgid "packages to download"
+msgstr "letöltendő csomagok"
+
+#: plugins/download.py:53
+msgid "download the src.rpm instead"
+msgstr "az src.rpm letöltése helyette"
+
+#: plugins/download.py:55
+msgid "download the -debuginfo package instead"
+msgstr "a -debuginfo csomag letöltése helyette"
+
+#: plugins/download.py:57
+msgid "download the -debugsource package instead"
+msgstr "a -debugsource csomag letöltése helyette"
+
+#: plugins/download.py:60
+msgid "limit  the  query to packages of given architectures."
+msgstr "behatárolja a csomag lekérdezéseket a megadott architektúráknál."
+
+#: plugins/download.py:62 plugins/modulesync.py:51
+msgid "resolve and download needed dependencies"
+msgstr "a szükséges függőségek feloldása és letöltése"
+
+#: plugins/download.py:64
+msgid ""
+"when running with --resolve, download all dependencies (do not exclude "
+"already installed ones)"
+msgstr ""
+"a --resolve futtatásakor töltse le az összes függőséget (ne hagyja ki a már "
+"telepítetteket)"
+
+#: plugins/download.py:67
+msgid ""
+"print list of urls where the rpms can be downloaded instead of downloading"
+msgstr ""
+"a letöltés helyett csak írja ki az URL-ek listáját, hogy honnan tölthetőek "
+"le"
+
+#: plugins/download.py:72
+msgid "when running with --url, limit to specific protocols"
+msgstr ""
+"amikor az --url kapcsolóval fut, akkor korlátozza bizonyos protokollokra"
+
+#: plugins/download.py:121 plugins/reposync.py:327
+#, python-format
+msgid "Failed to get mirror for package: %s"
+msgstr "Nem található tükör a csomaghoz: %s"
+
+#: plugins/download.py:243
+msgid "Exiting due to strict setting."
+msgstr "Kilépés a szigorú beállítás miatt."
+
+#: plugins/download.py:261
+msgid "Error in resolve of packages:"
+msgstr "Hiba a csomagok feloldásakor:"
+
+#: plugins/download.py:279
+#, python-format
+msgid "No source rpm defined for %s"
+msgstr "Nincs forrás rpm megadva ehhez: %s"
+
+#: plugins/download.py:296 plugins/download.py:309
+#, python-format
+msgid "No package %s available."
+msgstr "A(z) %s csomag nem érhető el."
+
+#: plugins/groups_manager.py:49
+msgid "Invalid group id"
+msgstr "Érvénytelen csoportazonosító"
+
+#: plugins/groups_manager.py:58
+msgid "Invalid translated data, should be in form 'lang:text'"
+msgstr ""
+"Érvénytelen lefordított adatok, a formátumnak ilyennek kellene lennie: "
+"„nyelv:szöveg”"
+
+#: plugins/groups_manager.py:61
+msgid "Invalid/empty language for translated data"
+msgstr "Érvénytelen/üres nyelv a lefordított adatoknál"
+
+#: plugins/groups_manager.py:71
+msgid "Can't generate group id from '{}'. Please specify group id using --id."
+msgstr ""
+"A csoportazonosító ebből nem állítható elő: „{}”. Adja meg a "
+"csoportazonosítót az --id kapcsolóval."
+
+#: plugins/groups_manager.py:79
+msgid "create and edit groups metadata file"
+msgstr "csoportok metaadat-fájljainak létrehozása és szerkesztése"
+
+#: plugins/groups_manager.py:90
+msgid "load groups metadata from file"
+msgstr "csoportok metaadatainak betöltése fájlból"
+
+#: plugins/groups_manager.py:93
+msgid "save groups metadata to file"
+msgstr "csoportok metaadatainak fájlba mentése"
+
+#: plugins/groups_manager.py:95
+msgid "load and save groups metadata to file"
+msgstr "csoportok metaadatainak fájlból betöltése, és abba mentése"
+
+#: plugins/groups_manager.py:97
+msgid "print the result metadata to stdout"
+msgstr "az eredményezett metaadatok kiírása a szabványos kimenetre"
+
+#: plugins/groups_manager.py:100
+msgid "group id"
+msgstr "csoportazonosító"
+
+#: plugins/groups_manager.py:101
+msgid "group name"
+msgstr "csoportnév"
+
+#: plugins/groups_manager.py:103
+msgid "group description"
+msgstr "csoportleírás"
+
+#: plugins/groups_manager.py:105
+msgid "group display order"
+msgstr "csoportok megjelenítése sorrendje"
+
+#: plugins/groups_manager.py:108
+msgid "translated name for the group"
+msgstr "a csoport lefordított neve"
+
+#: plugins/groups_manager.py:111
+msgid "translated description for the group"
+msgstr "lefordított leírás a csoport számára"
+
+#: plugins/groups_manager.py:115
+msgid "make the group user visible (default)"
+msgstr "a csoportfelhasználó láthatóvá tétele (alapértelmezett)"
+
+#: plugins/groups_manager.py:118
+msgid "make the group user invisible"
+msgstr "a csoportfelhasználó láthatatlanná tétele"
+
+#: plugins/groups_manager.py:123
+msgid "add packages to the mandatory section"
+msgstr "csomagok hozzáadása a kötelező szakaszhoz"
+
+#: plugins/groups_manager.py:125
+msgid "add packages to the optional section"
+msgstr "csomagok hozzáadása a nem kötelező szakaszhoz"
+
+#: plugins/groups_manager.py:127
+msgid "remove packages from the group instead of adding them"
+msgstr "csomagok eltávolítása a csoportból, a hozzáadásuk helyett"
+
+#: plugins/groups_manager.py:129
+msgid "include also direct dependencies for packages"
+msgstr "a csomagok közvetlen függőségeinek belevétele"
+
+#: plugins/groups_manager.py:132
+msgid "package specification"
+msgstr "csomagspecifikáció"
+
+#: plugins/groups_manager.py:156
+msgid "Can't edit group without specifying it (use --id or --name)"
+msgstr ""
+"Csoport nem szerkeszthető a megadása nélkül (használja az --id vagy --name "
+"kapcsolókat)"
+
+#: plugins/groups_manager.py:190
+msgid "Can't load file \"{}\": {}"
+msgstr "A(z) „{}” fájl nem tölthető be: {}"
+
+#: plugins/groups_manager.py:206
+msgid "Can't save file \"{}\": {}"
+msgstr "A(z) „{}” fájl nem írható: {}"
+
+#: plugins/groups_manager.py:261
+msgid "No match for argument: {}"
+msgstr "Nem található egyezés a következő argumentumra: {}"
+
+#: plugins/groups_manager.py:298
+msgid "Can't remove packages from non-existent group"
+msgstr "Nem távolítható el csomag egy nem létező csoportból"
+
+#: plugins/groups_manager.py:307
+msgid ""
+"Group id '{}' generated from '{}' is duplicit. Please specify group id using"
+" --id."
+msgstr ""
+"A következőből előállított „{}” csoportazonosító duplikátum: „{}”. Adja meg "
+"a csoportazonosítót az --id kapcsolóval."
+
+#: plugins/leaves.py:32
+msgid "List installed packages not required by any other package"
+msgstr "A más csomagok által nem igényelt csomagok listázása"
+
+#: plugins/local.py:122
+msgid "Unable to create a directory '{}' due to '{}'"
+msgstr "A(z) „{}” könyvtár nem hozható létre, mert: „{}”"
+
+#: plugins/local.py:126
+msgid "'{}' is not a directory"
+msgstr "A(z) „{}” nem könyvtár"
+
+#: plugins/local.py:135
+msgid "Copying '{}' to local repo"
+msgstr "A(z) „{}” másolása helyi tárolóba"
+
+#: plugins/local.py:141
+msgid "Can't write file '{}'"
+msgstr "A(z) „{}” fájl nem írható"
+
+#: plugins/local.py:156
+msgid "Rebuilding local repo"
+msgstr "Helyi tároló újraépítése"
+
+#: plugins/migrate.py:45
+msgid "migrate yum's history, group and yumdb data to dnf"
+msgstr ""
+"a yum előzményeinek, csoportjainak és yumdb adatainak migrálása a dnf-be"
+
+#: plugins/migrate.py:54
+msgid "Migrating history data..."
+msgstr "Előzményadatok migrálása…"
+
+#: plugins/modulesync.py:37
+msgid ""
+"Download packages from modules and/or create a repository with modular data"
+msgstr ""
+"Csomagok letöltése modulokból és/vagy moduláris adatokat tartalmazó tároló "
+"létrehozása"
+
+#: plugins/modulesync.py:44
+msgid "MODULE"
+msgstr "MODUL"
+
+#: plugins/modulesync.py:45
+msgid "modules to download"
+msgstr "letöltendő modulok"
+
+#: plugins/modulesync.py:47
+msgid "enable repositories with source packages"
+msgstr "forráscsomagokat tartalmazó tárolók engedélyezése"
+
+#: plugins/modulesync.py:49
+msgid "enable repositories with debug-info and debug-source packages"
+msgstr ""
+"debug-info és debug-source csomagokat tartalmazó tárolók engedélyezése"
+
+#: plugins/modulesync.py:53
+msgid "download only packages from newest modules"
+msgstr "csomagok letöltése csak a legújabb modulokból"
+
+#: plugins/modulesync.py:85
+msgid "Unable to find a match for argument: '{}'"
+msgid_plural "Unable to find a match for arguments: '{}'"
+msgstr[0] "Nem található egyezés a következő argumentumra: {}"
+msgstr[1] "Nem található egyezés a következő argumentumokra: {}"
+
+#: plugins/modulesync.py:107
+msgid ""
+"Creation of repository failed with return code {}. All downloaded content "
+"was kept on the system"
+msgstr ""
+"A tároló létrehozása a következő sikertelen eredménykóddal tért vissza: {}. "
+"Az összes letöltött tartalom megmaradt a rendszeren."
+
+#: plugins/modulesync.py:144
+#, python-brace-format
+msgid "No match for artifact '{0}' from module '{1}'"
+msgstr "Nincs találat a(z) „{0}” elemre a(z) „{1}” modulból"
+
+#: plugins/modulesync.py:162
+#, python-brace-format
+msgid "No match for package name '{0}' in profile {1} from module {2}"
+msgstr ""
+"Nincs találat a(z) „{0}” csomagnévre a(z) „{1}” profilban, a(z) „{2}” "
+"modulból"
+
+#: plugins/modulesync.py:166
+msgid "No mach for argument '{}'"
+msgstr "Nincs találat a következő argumentumra: „{}”"
+
+#. TODO(jmracek) Shell we end with an error or with RC 1?
+#: plugins/modulesync.py:198
+msgid "Unable to satisfy require {}"
+msgstr "A következő igénylés nem teljesíthető: {}"
+
+#: plugins/needs_restarting.py:68
+#, python-brace-format
+msgid ""
+"No installed package found for package name \"{pkg}\" specified in needs-"
+"restarting file \"{file}\"."
+msgstr ""
+"Nem található a(z) „{pkg}” telepített csomag, amely szerepel az újraindítást"
+" igénylő csomagokat tartalmazó „{file}” fájlban."
+
+#: plugins/needs_restarting.py:256
+msgid "determine updated binaries that need restarting"
+msgstr "határozza meg az újraindítást igénylő frissített binárisokat"
+
+#: plugins/needs_restarting.py:261
+msgid "only consider this user's processes"
+msgstr "csak ezen felhasználó folyamatait vegye figyelembe"
+
+#: plugins/needs_restarting.py:263
+msgid ""
+"only report whether a reboot is required (exit code 1) or not (exit code 0)"
+msgstr ""
+"csak arról jelentsen, hogy szükséges-e újraindítás (kilépési kód: 1) vagy "
+"sem (kilépési kód: 0)"
+
+#: plugins/needs_restarting.py:266
+msgid "only report affected systemd services"
+msgstr "csak az érintett systemd szolgáltatások jelentése"
+
+#: plugins/needs_restarting.py:289
+msgid "Core libraries or services have been updated since boot-up:"
+msgstr ""
+"Rendszerszintű programkönyvtárak és szolgáltatások lettek frissítve a "
+"rendszerindítás óta:"
+
+#: plugins/needs_restarting.py:294
+msgid "Reboot is required to fully utilize these updates."
+msgstr "Újraindítás szükséges ezen frissítések életbe lépéséhez."
+
+#: plugins/needs_restarting.py:295
+msgid "More information:"
+msgstr "További információk:"
+
+#: plugins/needs_restarting.py:299
+msgid "No core libraries or services have been updated since boot-up."
+msgstr ""
+"Egyetlen rendszerszintű programkönyvtár és szolgáltatás sem lett frissítve a"
+" rendszerindítás óta."
+
+#: plugins/needs_restarting.py:301
+msgid "Reboot should not be necessary."
+msgstr "Újraindítás nem szükséges."
+
+#: plugins/post-transaction-actions.py:71
+#, python-format
+msgid "Bad Action Line \"%s\": %s"
+msgstr "Hibás műveleti sor: „%s”: %s"
+
+#. unsupported state, skip it
+#: plugins/post-transaction-actions.py:133
+#, python-format
+msgid "Bad Transaction State: %s"
+msgstr "Hibás tranzakciós állapot: %s"
+
+#: plugins/post-transaction-actions.py:160
+#: plugins/post-transaction-actions.py:162
+#, python-format
+msgid "post-transaction-actions: %s"
+msgstr "post-transaction-actions: %s"
+
+#: plugins/post-transaction-actions.py:164
+#, python-format
+msgid "post-transaction-actions: Bad Command \"%s\": %s"
+msgstr "post-transaction-actions: Hibás parancs: „%s”: %s"
+
+#: plugins/repoclosure.py:42
+msgid "Display a list of unresolved dependencies for repositories"
+msgstr "A tárolók kielégítetlen függőségeinek megjelenítése"
+
+#: plugins/repoclosure.py:69
+msgid ""
+"Repoclosure ended with unresolved dependencies ({}) across {} packages."
+msgstr ""
+"A tárolózárás kielégítetlen függőségekkel ({}) ért véget {} csomagnál."
+
+#: plugins/repoclosure.py:159
+msgid "check packages of the given archs, can be specified multiple times"
+msgstr "megadott architektúrájú csomagok ellenőrzése, többször is megadható"
+
+#: plugins/repoclosure.py:162
+msgid "Specify repositories to check"
+msgstr "Adja meg az ellenőrizendő tárolókat"
+
+#: plugins/repoclosure.py:164
+msgid "Check only the newest packages in the repos"
+msgstr "Csak a legújabb csomagokat ellenőrizze a tárolókban"
+
+#: plugins/repoclosure.py:167
+msgid "Check closure for this package only"
+msgstr "Csak ehhez a csomaghoz ellenőrizze a zárást"
+
+#: plugins/repodiff.py:45
+msgid "List differences between two sets of repositories"
+msgstr "Különbségek felsorolása két tárolókészlet között"
+
+#: plugins/repodiff.py:58
+msgid "Specify old repository, can be used multiple times"
+msgstr "A régi tároló megadása, többször is megadható"
+
+#: plugins/repodiff.py:60
+msgid "Specify new repository, can be used multiple times"
+msgstr "Az új tároló megadása, többször is megadható"
+
+#: plugins/repodiff.py:63
+msgid ""
+"Specify architectures to compare, can be used multiple times. By default, "
+"only source rpms are compared."
+msgstr ""
+"Az összehasonlítandó architektúra megadása, többször is megadható. "
+"Alapértelmezetten csak a forrás rpm-ek lesznek összehasonlítva."
+
+#: plugins/repodiff.py:67
+msgid "Output additional data about the size of the changes."
+msgstr "További adatok kiírása a változások méretéről."
+
+#: plugins/repodiff.py:69
+msgid ""
+"Compare packages also by arch. By default packages are compared just by "
+"name."
+msgstr ""
+"Csomagok összehasonlítása architektúra szerint. Alapértelmezetten a csomagok"
+" csak név szerint lesznek összehasonlítva."
+
+#: plugins/repodiff.py:72
+msgid "Output a simple one line message for modified packages."
+msgstr "Egyszerű egysoros üzenetek kiírása a módosított csomagokhoz."
+
+#: plugins/repodiff.py:74
+msgid ""
+"Split the data for modified packages between upgraded and downgraded "
+"packages."
+msgstr ""
+"A módosított csomagok adatainak felosztása frissített és visszafejlesztett "
+"csomagokra."
+
+#: plugins/repodiff.py:86
+msgid "Both old and new repositories must be set."
+msgstr "A régi és az új tárolókat is meg kell adni."
+
+#: plugins/repodiff.py:178
+msgid "Size change: {} bytes"
+msgstr "Méretváltozás: {} bájt"
+
+#: plugins/repodiff.py:184
+msgid "Added package  : {}"
+msgstr "Csomag hozzáadva  : {}"
+
+#: plugins/repodiff.py:187
+msgid "Removed package: {}"
+msgstr "Csomag eltávolítva: {}"
+
+#: plugins/repodiff.py:190
+msgid "Obsoleted by   : {}"
+msgstr "Elavult emiatt    : {}"
+
+#: plugins/repodiff.py:195
+msgid ""
+"\n"
+"Upgraded packages"
+msgstr ""
+"\n"
+"Frissített csomagok"
+
+#: plugins/repodiff.py:200
+msgid ""
+"\n"
+"Downgraded packages"
+msgstr ""
+"\n"
+"Visszafejlesztett csomagok"
+
+#: plugins/repodiff.py:207
+msgid ""
+"\n"
+"Modified packages"
+msgstr ""
+"\n"
+"Módosított csomagok"
+
+#: plugins/repodiff.py:212
+msgid ""
+"\n"
+"Summary"
+msgstr ""
+"\n"
+"Összegzés"
+
+#: plugins/repodiff.py:213
+msgid "Added packages: {}"
+msgstr "Hozzáadott csomagok: {}"
+
+#: plugins/repodiff.py:214
+msgid "Removed packages: {}"
+msgstr "Eltávolított csomagok: {}"
+
+#: plugins/repodiff.py:216
+msgid "Upgraded packages: {}"
+msgstr "Frissített csomagok: {}"
+
+#: plugins/repodiff.py:217
+msgid "Downgraded packages: {}"
+msgstr "Visszafejlesztett csomagok: {}"
+
+#: plugins/repodiff.py:219
+msgid "Modified packages: {}"
+msgstr "Módosított csomagok: {}"
+
+#: plugins/repodiff.py:222
+msgid "Size of added packages: {}"
+msgstr "Hozzáadott csomagok mérete: {}"
+
+#: plugins/repodiff.py:223
+msgid "Size of removed packages: {}"
+msgstr "Eltávolított csomagok mérete: {}"
+
+#: plugins/repodiff.py:225
+msgid "Size of modified packages: {}"
+msgstr "Módosított csomagok mérete: {}"
+
+#: plugins/repodiff.py:228
+msgid "Size of upgraded packages: {}"
+msgstr "Frissített csomagok mérete: {}"
+
+#: plugins/repodiff.py:230
+msgid "Size of downgraded packages: {}"
+msgstr "Visszafejlesztett csomagok mérete: {}"
+
+#: plugins/repodiff.py:232
+msgid "Size change: {}"
+msgstr "Méretváltozás: {}"
+
+#: plugins/repograph.py:50
+msgid "Output a full package dependency graph in dot format"
+msgstr "A teljes függőségi gráf kiírása pontozott formában"
+
+#: plugins/repograph.py:110
+#, python-format
+msgid "Nothing provides: '%s'"
+msgstr "Semmi sem biztosítja: „%s”"
+
+#: plugins/repomanage.py:45
+msgid "Manage a directory of rpm packages"
+msgstr "Egy rpm csomagokkal teli könyvtár kezelése"
+
+#: plugins/repomanage.py:59
+msgid "Pass either --old or --new, not both!"
+msgstr "Csak az --old, vagy a --new kapcsolót használja, de ne mindkettőt!"
+
+#: plugins/repomanage.py:61
+msgid "Pass either --oldonly or --new, not both!"
+msgstr "Csak az --old, vagy a --new kapcsolót használja, ne mindkettőt."
+
+#: plugins/repomanage.py:63
+msgid "Pass either --old or --oldonly, not both!"
+msgstr "Csak az --old, vagy az --oldonly kapcsolót használja, ne mindkettőt."
+
+#: plugins/repomanage.py:100
+msgid "No files to process"
+msgstr "Nincsenek feldolgozandó fájlok"
+
+#: plugins/repomanage.py:107
+msgid "Could not open {}"
+msgstr "A(z) {} nem nyitható meg"
+
+#: plugins/repomanage.py:223
+msgid "Print the older packages"
+msgstr "Régebbi csomagok kiírása"
+
+#: plugins/repomanage.py:225
+msgid "Print the older packages. Exclude the newest packages."
+msgstr "A régebbi csomagok kiírása. A legújabb csomagok kihagyása."
+
+#: plugins/repomanage.py:227
+msgid "Print the newest packages"
+msgstr "Legújabb csomagok kiírása"
+
+#: plugins/repomanage.py:229
+msgid "Space separated output, not newline"
+msgstr "Szóközzel, és nem újsorral elválasztott kimenet"
+
+#: plugins/repomanage.py:231
+msgid "Newest N packages to keep - defaults to 1"
+msgstr "Megtartandó legfrissebb N csomag – alapértelmezésben 1"
+
+#: plugins/repomanage.py:234
+msgid "Path to directory"
+msgstr "Útvonal a könyvtárhoz"
+
+#: plugins/reposync.py:55
+msgid "download all packages from remote repo"
+msgstr "minden csomag letöltése a távoli tárolóból"
+
+#: plugins/reposync.py:64
+msgid "download only packages for this ARCH"
+msgstr "csak az ezen ARCHITEKTÚRÁhoz tartozó csomagok letöltése"
+
+#: plugins/reposync.py:66
+msgid "delete local packages no longer present in repository"
+msgstr "a tárolóban már nem található helyi csomagok törlése"
+
+#: plugins/reposync.py:68
+msgid "download all the metadata."
+msgstr "összes metaadat letöltése."
+
+#: plugins/reposync.py:70
+msgid "Remove packages that fail GPG signature checking after downloading"
+msgstr ""
+"A GPG aláírás-ellenőrzésen elbukott csomagok eltávolítása letöltés után"
+
+#: plugins/reposync.py:73
+msgid "also download and uncompress comps.xml"
+msgstr "a comps.xml is kerüljön letöltésre és kibontásra"
+
+#: plugins/reposync.py:75
+msgid ""
+"where to store downloaded repository metadata. Defaults to the value of "
+"--download-path."
+msgstr ""
+"hol tárolja a letöltött tároló-metaadatokat. Az alapértelmezett a "
+"--download-path értéke."
+
+#: plugins/reposync.py:78
+msgid "download only newest packages per-repo"
+msgstr "csak a tárolókban lévő legújabb csomagok letöltése"
+
+#: plugins/reposync.py:80
+msgid "Don't add the reponame to the download path."
+msgstr "Ne adja hozzá a tároló nevét a letöltési útvonalhoz."
+
+#: plugins/reposync.py:82
+msgid "where to store downloaded repositories"
+msgstr "hol tárolja a letöltött tárolókat"
+
+#: plugins/reposync.py:84
+msgid "try to set local timestamps of local files by the one on the server"
+msgstr ""
+"a helyi fájlok helyi időbélyegeit próbálja meg a kiszolgáló alapján "
+"beállítani"
+
+#: plugins/reposync.py:87
+msgid "download only source packages"
+msgstr "csak forráscsomagok letöltése"
+
+#: plugins/reposync.py:89
+msgid "Just list urls of what would be downloaded, don't download"
+msgstr "Csak a letöltendő URL-ek felsorolása, ne töltse le azokat"
+
+#: plugins/reposync.py:92
+msgid ""
+"Filesystem path that is considered safe for writing. Defaults to download "
+"path."
+msgstr ""
+
+#: plugins/reposync.py:119
+msgid "Can't use --norepopath with multiple repositories"
+msgstr "A --norepopath nem használható több tárolóval"
+
+#: plugins/reposync.py:122
+#, fuzzy
+#| msgid "Can't use --norepopath with multiple repositories"
+msgid "Can't use --safe-write-path with multiple repositories"
+msgstr "A --norepopath nem használható több tárolóval"
+
+#: plugins/reposync.py:141
+#, python-format
+msgid "Failed to get mirror for metadata: %s"
+msgstr "Nem található tükör a metaadatokhoz: %s"
+
+#: plugins/reposync.py:158
+msgid "Failed to get mirror for the group file."
+msgstr "Nem található tükör a csoportfájlhoz."
+
+#: plugins/reposync.py:177
+msgid "Removing {}: {}"
+msgstr "A(z) {} eltávolítása: {}"
+
+#: plugins/reposync.py:184
+msgid "GPG signature check failed."
+msgstr "A GPG aláírás-ellenőrzés sikertelen."
+
+#: plugins/reposync.py:208
+#, fuzzy, python-brace-format
+#| msgid "Download target '{}' is outside of download path '{}'."
+msgid ""
+"Download target '{0}' for location '{1}' of '{2}' package is outside of safe"
+" write path '{3}'."
+msgstr "A(z) „{}” letöltési cél a(z) „{}” letöltési útvonalon kívül esik."
+
+#: plugins/reposync.py:224
+#, python-format
+msgid "[DELETED] %s"
+msgstr "[TÖRÖLVE] %s"
+
+#: plugins/reposync.py:226
+#, python-format
+msgid "failed to delete file %s"
+msgstr "nem sikerült törölni a(z) %s fájlt"
+
+#: plugins/reposync.py:235
+#, python-format
+msgid "comps.xml for repository %s saved"
+msgstr "a(z) %s tárolóhoz tartozó comps.xml mentve"
+
+#: plugins/show_leaves.py:54
+msgid "New leaves:"
+msgstr "Új levelek:"
+
+#. Translators: This string is only used in unit tests.
+#: plugins/system_upgrade.py:45
+msgid "the color of the sky"
+msgstr "az égbolt színe"
+
+#: plugins/system_upgrade.py:57
+msgid "Need a --releasever greater than the current system version."
+msgstr ""
+"A jelenlegi rendszer verziójánál nagyobb --releasever értéket kell megadnia."
+
+#. Translators: do not change "reboot" here
+#: plugins/system_upgrade.py:59
+#, python-brace-format
+msgid ""
+"Download complete! Use 'dnf {command} reboot' to start the upgrade.\n"
+"To remove cached metadata and transaction use 'dnf {command} clean'"
+msgstr ""
+"Letöltés kész! Használja a „dnf {command} reboot” parancsot a frissítés indításához.\n"
+"A tárolt metaadatok és a tranzakció eltávolításához használja ezt: „dnf {command} clean”"
+
+#: plugins/system_upgrade.py:62
+msgid "Sorry, you need to use 'download --releasever' instead of '--network'"
+msgstr ""
+"Sajnáljuk, a „download --releasever” parancsot kell használni a „--network” "
+"helyett"
+
+#: plugins/system_upgrade.py:71
+msgid "Reboot turned off, not rebooting."
+msgstr "Újraindítás kikapcsolva, nem lesz újraindítva."
+
+#: plugins/system_upgrade.py:125
+#, python-format
+msgid "Screen blanking can't be disabled: %s"
+msgstr "A képernyő törlése nem tiltható le: %s"
+
+#: plugins/system_upgrade.py:145
+#, python-format
+msgid "Failed loading state file: %s, continuing with empty state."
+msgstr "Állapotfájl betöltése meghiúsult: %s, folytatás üres állapottal."
+
+#: plugins/system_upgrade.py:293
+msgid "The following boots appear to contain upgrade logs:"
+msgstr "A következő indulások tartalmazzák a frissítési naplókat:"
+
+#: plugins/system_upgrade.py:303
+msgid "-- no logs were found --"
+msgstr "-- nem található naplófájl --"
+
+#: plugins/system_upgrade.py:318
+msgid "Cannot find logs with this index."
+msgstr "Ilyen index alatt nem található naplófájl."
+
+#: plugins/system_upgrade.py:327
+msgid "Unable to match systemd journal entry"
+msgstr "Nincs találat a systemd naplóbejegyzésre"
+
+#: plugins/system_upgrade.py:348
+msgid "Prepare system for upgrade to a new release"
+msgstr "Rendszer előkészítése az új verzióra történő frissítéshez"
+
+#: plugins/system_upgrade.py:364
+msgid "keep installed packages if the new release's version is older"
+msgstr "megtartja a telepített csomagokat, ha az új kiadás verziója régebbi"
+
+#: plugins/system_upgrade.py:368
+msgid "power off system after the operation is completed"
+msgstr "a rendszer kikapcsolása a művelet végeztével"
+
+#: plugins/system_upgrade.py:372
+msgid "which logs to show"
+msgstr "megjelenítendő naplók"
+
+#: plugins/system_upgrade.py:406
+#, python-brace-format
+msgid "Incompatible version of data. Rerun 'dnf {command} download [OPTIONS]'"
+msgstr ""
+"Nem kompatibilis adatverziók. Futtassa újra: „dnf {command} download "
+"[KAPCSOLÓK]”"
+
+#: plugins/system_upgrade.py:442
+msgid "Command 'offline-distrosync' cannot be used with --no-downgrade option"
+msgstr ""
+"Az „offline-distrosync” parancs nem használható a --no-downgrade kapcsolóval"
+
+#: plugins/system_upgrade.py:464
+msgid "Additional information for System Upgrade: {}"
+msgstr "További információk a rendszerfrissítéshez: {}"
+
+#: plugins/system_upgrade.py:467
+msgid ""
+"Before you continue ensure that your system is fully upgraded by running "
+"\"dnf --refresh upgrade\". Do you want to continue"
+msgstr ""
+"A folytatás előtt győződjön meg róla, hogy a rendszer teljesen frissítve "
+"lett a „dnf --refresh upgrade” paranccsal. Folytatja"
+
+#: plugins/system_upgrade.py:471
+msgid "Operation aborted."
+msgstr "Művelet megszakítva."
+
+#: plugins/system_upgrade.py:532
+msgid "system is not ready for upgrade"
+msgstr "a rendszer nem áll készen a frissítésre"
+
+#: plugins/system_upgrade.py:535
+#, python-brace-format
+msgid ""
+"the transaction was not prepared for '{command}'. Rerun 'dnf {command} "
+"download [OPTIONS]'"
+msgstr ""
+"a tranzakció nem készült el ehhez: „{command}”. Futtassa újra: „dnf "
+"{command} download [KAPCSOLÓK]”"
+
+#: plugins/system_upgrade.py:539
+msgid "upgrade is already scheduled"
+msgstr "a frissítés már ütemezve van"
+
+#: plugins/system_upgrade.py:545
+msgid "trigger file does not exist. exiting quietly."
+msgstr "a kiváltó fájl nem létezik. csendes kilépés."
+
+#: plugins/system_upgrade.py:548
+msgid "another upgrade tool is running. exiting quietly."
+msgstr "fut egy másik frissítési eszköz. csendes kilépés."
+
+#: plugins/system_upgrade.py:557
+#, python-brace-format
+msgid "use 'dnf {command} reboot' to begin the upgrade"
+msgstr ""
+"a telepítés folytatásához használja a „dnf {command} reboot” parancsot"
+
+#: plugins/system_upgrade.py:577
+msgid "Rebooting to perform upgrade."
+msgstr "Újraindítás a frissítés végrehajtásához."
+
+#: plugins/system_upgrade.py:613
+msgid "Starting offline upgrade. This will take a while."
+msgstr "Offline frissítés elkezdése. Ez eltart egy darabig."
+
+#: plugins/system_upgrade.py:615
+msgid "Starting offline distrosync. This will take a while."
+msgstr "Offline disztribúciószinkronizálás elkezdése. Ez eltart egy darabig."
+
+#: plugins/system_upgrade.py:617
+msgid "Starting system upgrade. This will take a while."
+msgstr "Rendszerfrissítés elkezdése. Ez eltart egy darabig."
+
+#: plugins/system_upgrade.py:633
+msgid "Cleaning up downloaded data..."
+msgstr "Letöltött adatok tisztítása…"
+
+#: plugins/system_upgrade.py:663
+msgid ""
+"The system-upgrade transaction is empty, your system is already up-to-date."
+msgstr "A rendszerfrissítés tranzakció üres, a rendszere már naprakész."
+
+#: plugins/system_upgrade.py:672
+msgid "Transaction saved to {}."
+msgstr "Tranzakció mentve ide: {}."
+
+#: plugins/system_upgrade.py:675
+msgid "Error storing transaction: {}"
+msgstr "Hiba a tranzakció tárolásában: {}"
+
+#: plugins/system_upgrade.py:697
+msgid "Download finished."
+msgstr "Letöltés befejezve."
+
+#: plugins/system_upgrade.py:701
+msgid "Upgrade complete! Cleaning up and powering off..."
+msgstr "Frissítés kész! Tisztítás és újraindítás…"
+
+#: plugins/system_upgrade.py:703
+msgid "Upgrade complete! Cleaning up and rebooting..."
+msgstr "Frissítés kész! Tisztítás és újraindítás…"
+
+#: plugins/system_upgrade.py:715
+msgid "Prepare offline upgrade of the system"
+msgstr "A rendszer offline frissítésének előkészítése"
+
+#: plugins/system_upgrade.py:720
+msgid "Prepare offline distrosync of the system"
+msgstr "A rendszer offline disztribúciófrissítésének előkészítése"
+
+#: plugins/versionlock.py:33
+#, python-format
+msgid "Unable to read version lock configuration: %s"
+msgstr "A verziózár beállítások nem olvashatóak: %s"
+
+#: plugins/versionlock.py:34
+msgid "Locklist not set"
+msgstr "Zárolási lista nincs beállítva"
+
+#: plugins/versionlock.py:35
+msgid "Adding versionlock on:"
+msgstr "Verziózár hozzáadása erre:"
+
+#: plugins/versionlock.py:36
+msgid "Adding exclude on:"
+msgstr "Kizárás hozzáadása erre:"
+
+#: plugins/versionlock.py:37
+msgid "Package already locked in equivalent form:"
+msgstr "A csomag már ekvivalens alakban zárolt:"
+
+#: plugins/versionlock.py:38
+msgid "Package {} is already locked"
+msgstr "A(z) {} csomag már zárolt"
+
+#: plugins/versionlock.py:39
+msgid "Package {} is already excluded"
+msgstr "A(z) {} csomag már kizárt"
+
+#: plugins/versionlock.py:40
+msgid "Deleting versionlock for:"
+msgstr "Verziózár törlése erről:"
+
+#: plugins/versionlock.py:41
+msgid "No package found for:"
+msgstr "Nem található csomag ehhez:"
+
+#: plugins/versionlock.py:42
+msgid "Excludes from versionlock plugin were not applied"
+msgstr "A verziózár bővítmény kizárásai nem lettek alkalmazva"
+
+#: plugins/versionlock.py:43
+msgid "Versionlock plugin: number of lock rules from file \"{}\" applied: {}"
+msgstr ""
+"Verziózár bővítmény: a(z) „{}” fájlból alkalmazott zárolási szabályok száma:"
+" {}"
+
+#: plugins/versionlock.py:44
+msgid "Versionlock plugin: number of exclude rules from file \"{}\" applied: {}"
+msgstr ""
+"Verziózár bővítmény: a(z) „{}” fájlból alkalmazott kizárási szabályok száma:"
+" {}"
+
+#: plugins/versionlock.py:45
+msgid "Versionlock plugin: could not parse pattern:"
+msgstr "Verziózár bővítmény: a minta nem dolgozható fel:"
+
+#: plugins/versionlock.py:138
+msgid "control package version locks"
+msgstr "csomagverzió zárolások vezérlése"
+
+#: plugins/versionlock.py:144
+msgid "Use package specifications as they are, do not try to parse them"
+msgstr ""
+"Az eredeti csomagspecifikációk használata, ne próbálja meg értelmezni azokat"
+
+#: plugins/versionlock.py:164
+msgid "Subcommand '{}' is deprecated. Use 'exclude' subcommand instead."
+msgstr ""
+"A(z) „{}” alparancs elavult. Helyette használja a(z) „exclude” alparancsot."
+
+#~ msgid "repo to modify"
+#~ msgstr "a módosítandó tároló"
+
+#~ msgid ""
+#~ "This repository does not have any builds yet so you cannot enable it now."
+#~ msgstr ""
+#~ "Ez a tároló még nem tartalmaz építéseket, így most nem engedélyezheti."
+
+#~ msgid ""
+#~ "\n"
+#~ "You are about to enable a Playground repository.\n"
+#~ "\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "\n"
+#~ "Egy Játszótér tároló engedélyezésére készül.\n"
+#~ "\n"
+#~ "Szeretné folytatni?"
+
+#~ msgid "also download comps.xml"
+#~ msgstr "a comps.xml is kerüljön letöltésre"
+
+#~ msgid "where to store downloaded repositories "
+#~ msgstr "hol tárolja a letöltött tárolókat "
+
+#~ msgid "Could not make repository directory: %s"
+#~ msgstr "Nem hozható létre a tároló könyvtár: %s"

@@ -1,0 +1,1611 @@
+# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata, 2020, 2021, 2022, 2023.
+# Göran Uddeborg <goeran@uddeborg.se>, 2018. #zanata, 2020, 2021, 2022, 2023.
+# Göran Uddeborg <goeran@uddeborg.se>, 2019. #zanata, 2020, 2021, 2022, 2023.
+# Göran Uddeborg <goeran@uddeborg.se>, 2020. #zanata, 2021, 2022, 2023.
+# Mikael Granberg <mikael@famgra.se>, 2020.
+# Luna Jernberg <bittin@reimu.nl>, 2021, 2022, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-20 01:38+0000\n"
+"PO-Revision-Date: 2023-06-06 11:20+0000\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/dnf/dnf-plugins-core-l10n-master/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#: plugins/builddep.py:45
+msgid "[PACKAGE|PACKAGE.spec]"
+msgstr "[PAKET|PAKET.spec]"
+
+#: plugins/builddep.py:85
+#, python-format
+msgid "'%s' is not of the format 'MACRO EXPR'"
+msgstr "”%s” är inte på formatet ”MAKRO UTTR”"
+
+#: plugins/builddep.py:90
+msgid "packages with builddeps to install"
+msgstr "paket med byggberoenden att installera"
+
+#: plugins/builddep.py:93
+msgid "define a macro for spec file parsing"
+msgstr "definiera ett makro för spec-filtolkning"
+
+#: plugins/builddep.py:95
+msgid "skip build dependencies not available in repositories"
+msgstr "hoppa över byggberoenden som inte är tillgängliga i förråd"
+
+#: plugins/builddep.py:98
+msgid "treat commandline arguments as spec files"
+msgstr "behandla kommandoradsargument som spec-filer"
+
+#: plugins/builddep.py:100
+msgid "treat commandline arguments as source rpm"
+msgstr "behandla kommandoradsargument som källkods-rpm:er"
+
+#: plugins/builddep.py:144
+msgid "RPM: {}"
+msgstr "RPM: {}"
+
+#: plugins/builddep.py:153
+msgid "Some packages could not be found."
+msgstr "Några paket fanns inte."
+
+#. No provides, no files
+#. Richdeps can have no matches but it could be correct (solver must decide
+#. later)
+#: plugins/builddep.py:173
+#, python-format
+msgid "No matching package to install: '%s'"
+msgstr "Inget matchande paket att installera: ”%s”"
+
+#: plugins/builddep.py:191
+#, python-format
+msgid "Failed to open: '%s', not a valid source rpm file."
+msgstr "Misslyckades att öppna: ”%s”, inte en giltig källkods-rpm-fil."
+
+#: plugins/builddep.py:204 plugins/builddep.py:224 plugins/builddep.py:241
+msgid "Not all dependencies satisfied"
+msgstr "Alla beroenden uppfylldes inte"
+
+#: plugins/builddep.py:208
+msgid ""
+"Warning: -D or --define arguments have no meaning for source rpm packages."
+msgstr ""
+"VARNING: -D eller --define argument har ingen mening för käll rpmpaket."
+
+#: plugins/builddep.py:215
+#, python-format
+msgid "Failed to open: '%s', not a valid spec file: %s"
+msgstr "Misslyckades att öppna: ”%s”, inte en giltig spec-fil: %s"
+
+#: plugins/builddep.py:234 plugins/repoclosure.py:124
+#, python-format
+msgid "no package matched: %s"
+msgstr "inget paket matchade: %s"
+
+#: plugins/changelog.py:37
+#, python-brace-format
+msgid "Not a valid date: \"{0}\"."
+msgstr "Inte ett giltigt datum: ”{0}”."
+
+#: plugins/changelog.py:43
+msgid "Show changelog data of packages"
+msgstr "Visa paketens ändringsloggsdata"
+
+#: plugins/changelog.py:51
+msgid ""
+"show changelog entries since DATE. To avoid ambiguosity, YYYY-MM-DD format "
+"is recommended."
+msgstr ""
+"visa ändringsloggsposter sedan DATUM. För att undvika tvetydigheter "
+"rekommenderas formatet ÅÅÅÅ-MM-DD."
+
+#: plugins/changelog.py:55
+msgid "show given number of changelog entries per package"
+msgstr "visa det givna antalet ändringsloggsposter per paket"
+
+#: plugins/changelog.py:58
+msgid ""
+"show only new changelog entries for packages, that provide an upgrade for "
+"some of already installed packages."
+msgstr ""
+"visa endast nya ändringsloggsposter för paket, som medför en uppgradering "
+"för något redan installerat paket."
+
+#: plugins/changelog.py:60
+msgid "PACKAGE"
+msgstr "PAKET"
+
+#: plugins/changelog.py:81 plugins/debuginfo-install.py:90
+#, python-format
+msgid "No match for argument: %s"
+msgstr "Ingen matchning för argumentet: %s"
+
+#: plugins/changelog.py:109
+msgid "Listing changelogs since {}"
+msgstr "Listar ändringsloggar sedan {}"
+
+#: plugins/changelog.py:111
+msgid "Listing only latest changelog"
+msgid_plural "Listing {} latest changelogs"
+msgstr[0] "Listar endast den senaste ändringsloggen"
+msgstr[1] "Listar de {} senaste ändringsloggarna"
+
+#: plugins/changelog.py:116
+msgid "Listing only new changelogs since installed version of the package"
+msgstr ""
+"Listar endast nya ändringsloggar sedan den installerade versionen av paketet"
+
+#: plugins/changelog.py:118
+msgid "Listing all changelogs"
+msgstr "Listar alla ändringsloggar"
+
+#: plugins/changelog.py:122
+msgid "Changelogs for {}"
+msgstr "Ändringslogg för {}"
+
+#: plugins/config_manager.py:38
+#, python-brace-format
+msgid "manage {prog} configuration options and repositories"
+msgstr "hantera {prog}-konfigurationsalternativ och -förråd"
+
+#: plugins/config_manager.py:45
+msgid "configuration sections to manage, \"main\" or repoid"
+msgstr "konfigurations sektioner att hantera, \"main\" eller repoid"
+
+#: plugins/config_manager.py:48
+msgid "save the current options (useful with --setopt)"
+msgstr "spara de nuvarande alternativen (användbart med --setopt)"
+
+#: plugins/config_manager.py:51
+msgid "add (and enable) the repo from the specified file or url"
+msgstr "lägg till (och aktivera) förrådet från den angivna filen eller url:en"
+
+#: plugins/config_manager.py:54
+msgid "print current configuration values to stdout"
+msgstr "skriv ut aktuella konfigurationsvärden till standard ut"
+
+#: plugins/config_manager.py:57
+msgid "print variable values to stdout"
+msgstr "skriv ut variabelvärden till standard ut"
+
+#: plugins/config_manager.py:61
+msgid "enable repos (automatically saves)"
+msgstr "aktivera förråd (sparas automatiskt)"
+
+#: plugins/config_manager.py:64
+msgid "disable repos (automatically saves)"
+msgstr "avaktivera förråd (sparas automatiskt)"
+
+#: plugins/config_manager.py:78
+msgid "one of the following arguments is required: {}"
+msgstr "ett av följande argument krävs: {}"
+
+#: plugins/config_manager.py:87
+msgid ""
+"Warning: --enablerepo/--disablerepo arguments have no meaningwith config "
+"manager. Use --set-enabled/--set-disabled instead."
+msgstr ""
+"Varning: argumenten --enablerepo/--disablerepo har ingen mening med "
+"konfigurationshanteraren. Använd --set-enabled/--set-disabled istället."
+
+#: plugins/config_manager.py:134
+#, python-format
+msgid "No matching repo to modify: %s."
+msgstr "Inget matchande förråd att ändra: %s."
+
+#: plugins/config_manager.py:185
+#, python-format
+msgid "Adding repo from: %s"
+msgstr "Lägger till förråd från: %s"
+
+#: plugins/config_manager.py:209
+msgid "Configuration of repo failed"
+msgid_plural "Configuration of repos failed"
+msgstr[0] "Konfiguration av förråd misslyckades"
+msgstr[1] "Konfiguration av förråd misslyckades"
+
+#: plugins/config_manager.py:219
+#, python-format
+msgid "Could not save repo to repofile %s: %s"
+msgstr "Kunde inte spara förrådet till förrådsfilen %s: %s"
+
+#: plugins/copr.py:70
+msgid "y"
+msgstr "j"
+
+#: plugins/copr.py:70
+msgid "yes"
+msgstr "ja"
+
+#: plugins/copr.py:71
+msgid "n"
+msgstr "n"
+
+#: plugins/copr.py:71
+msgid "no"
+msgstr "nej"
+
+#: plugins/copr.py:92
+msgid "Interact with Copr repositories."
+msgstr "Interagera med Copr-förråd."
+
+#: plugins/copr.py:94
+msgid ""
+"\n"
+"  enable name/project [chroot]\n"
+"  disable name/project\n"
+"  remove name/project\n"
+"  list --installed/enabled/disabled\n"
+"  list --available-by-user=NAME\n"
+"  search project\n"
+"\n"
+"  Examples:\n"
+"  copr enable rhscl/perl516 epel-6-x86_64\n"
+"  copr enable ignatenkobrain/ocltoys\n"
+"  copr disable rhscl/perl516\n"
+"  copr remove rhscl/perl516\n"
+"  copr list --enabled\n"
+"  copr list --available-by-user=ignatenkobrain\n"
+"  copr search tests\n"
+"    "
+msgstr ""
+"\n"
+"  enable namn/projekt [bytrot]\n"
+"  disable namn/projekt\n"
+"  remove namn/projekt\n"
+"  list --installed/enabled/disabled\n"
+"  list --available-by-user=NAMN\n"
+"  search projekt\n"
+"\n"
+"  Exempel:\n"
+"  copr enable rhscl/perl516 epel-6-x86_64\n"
+"  copr enable ignatenkobrain/ocltoys\n"
+"  copr disable rhscl/perl516\n"
+"  copr remove rhscl/perl516\n"
+"  copr list --enabled\n"
+"  copr list --available-by-user=ignatenkobrain\n"
+"  copr search tests\n"
+"    "
+
+#: plugins/copr.py:120
+msgid "List all installed Copr repositories (default)"
+msgstr "Lista alla installerade Copr-förråd (standard)"
+
+#: plugins/copr.py:122
+msgid "List enabled Copr repositories"
+msgstr "Lista aktiverade Copr-förråd"
+
+#: plugins/copr.py:124
+msgid "List disabled Copr repositories"
+msgstr "Lista avaktiverade Copr-förråd"
+
+#: plugins/copr.py:126
+msgid "List available Copr repositories by user NAME"
+msgstr "Lista tillgängliga Copr-förråd från användare NAMN"
+
+#: plugins/copr.py:128
+msgid "Specify an instance of Copr to work with"
+msgstr "Ange en instans av Copr att arbeta med"
+
+#: plugins/copr.py:163 plugins/copr.py:254 plugins/copr.py:281
+msgid "Error: "
+msgstr "Fel: "
+
+#: plugins/copr.py:164
+msgid ""
+"specify Copr hub either with `--hub` or using "
+"`copr_hub/copr_username/copr_projectname` format"
+msgstr ""
+"ange Copr-nav antingen med ”--hub” eller genom att använda formatet "
+"”opr_hub/copr_username/copr_projectname”"
+
+#: plugins/copr.py:167
+msgid "multiple hubs specified"
+msgstr "flera nav angivna"
+
+#: plugins/copr.py:255 plugins/copr.py:259
+msgid "exactly two additional parameters to copr command are required"
+msgstr "exakt två ytterligare parametrar till kommandot copr behövs"
+
+#: plugins/copr.py:264
+msgid "Too many arguments."
+msgstr "För många argument."
+
+#: plugins/copr.py:267
+msgid ""
+"Bad format of optional chroot. The format is distribution-version-"
+"architecture."
+msgstr ""
+"Felaktigt format för frivillig chroot. Formatet är distribution-version-"
+"arkitektur."
+
+#: plugins/copr.py:282
+msgid "use format `copr_username/copr_projectname` to reference copr project"
+msgstr ""
+"använd formatet ”copr_användarnamn/copr_projektnamn” för att referera copr-"
+"projekt"
+
+#: plugins/copr.py:284
+msgid "bad copr project format"
+msgstr "felaktigt copr-projektformat"
+
+#: plugins/copr.py:298
+msgid ""
+"\n"
+"Enabling a Copr repository. Please note that this repository is not part\n"
+"of the main distribution, and quality may vary.\n"
+"\n"
+"The Fedora Project does not exercise any power over the contents of\n"
+"this repository beyond the rules outlined in the Copr FAQ at\n"
+"<https://docs.pagure.org/copr.copr/user_documentation.html#what-i-can-build-in-copr>,\n"
+"and packages are not held to any quality or security level.\n"
+"\n"
+"Please do not file bug reports about these packages in Fedora\n"
+"Bugzilla. In case of problems, contact the owner of this repository.\n"
+msgstr ""
+"\n"
+"Aktivering av ett Copr-förråd. Observera att detta förråd inte är en del\n"
+"av huvuddistributionen, och kvaliteten kan variera.\n"
+"\n"
+"Fedoraprojektet har ingen makt över innehållet i detta förråd\n"
+"utöver reglerna i Copr FAQ:n på\n"
+"<https://docs.pagure.org/copr.copr/user_documentation.html#what-i-can-build-in-copr>,\n"
+"och upprätthåller inte någon viss kvalitet eller säkerhetsnivå på paketen.\n"
+"\n"
+"Rapportera inte fel på dessa paket i Fedoras Bugzilla. Kontakta vid problem\n"
+"förrådets ägare.\n"
+
+#: plugins/copr.py:315
+msgid "Repository successfully enabled."
+msgstr "Förrådet aktiverat."
+
+#: plugins/copr.py:320
+msgid "Repository successfully disabled."
+msgstr "Förrådet avaktiverat."
+
+#: plugins/copr.py:324
+msgid "Repository successfully removed."
+msgstr "Förrådet borttaget."
+
+#: plugins/copr.py:328 plugins/copr.py:739
+msgid "Unknown subcommand {}."
+msgstr "Okänt underkommando {}."
+
+#: plugins/copr.py:385
+msgid ""
+"* These coprs have repo file with an old format that contains no information"
+" about Copr hub - the default one was assumed. Re-enable the project to fix "
+"this."
+msgstr ""
+"* Dessa copr:er har förrådsfiler med ett gammalt format som inte innehåller "
+"någon information om Copr-nav — standardnavet antas. Aktivera om projektet "
+"för att fixa detta."
+
+#: plugins/copr.py:398
+msgid "Can't parse repositories for username '{}'."
+msgstr "Kan inte tolka förråd för användarnamnet ”{}”."
+
+#: plugins/copr.py:401
+msgid "List of {} coprs"
+msgstr "lista över {} copr"
+
+#: plugins/copr.py:406
+msgid "No description given"
+msgstr "Ingen beskrivning angiven"
+
+#: plugins/copr.py:418
+msgid "Can't parse search for '{}'."
+msgstr "Kan inte tolka sökningen efter ”{}”."
+
+#: plugins/copr.py:421
+msgid "Matched: {}"
+msgstr "Matchade: {}"
+
+#: plugins/copr.py:426
+msgid "No description given."
+msgstr "Ingen beskrivning angiven."
+
+#: plugins/copr.py:448
+msgid "Safe and good answer. Exiting."
+msgstr "Säkert och bra svar. Avslutar."
+
+#: plugins/copr.py:455
+msgid "This command has to be run under the root user."
+msgstr "Detta kommando måste köras som användaren root."
+
+#: plugins/copr.py:505
+#, python-brace-format
+msgid "Request to {0} failed: {1} - {2}"
+msgstr "Förfrågan att {0} misslyckades: {1} - {2}"
+
+#: plugins/copr.py:507
+msgid "It wasn't possible to enable this project.\n"
+msgstr "Det gick inte att aktivera det här projektet.\n"
+
+#: plugins/copr.py:512
+#, python-brace-format
+msgid "Repository '{0}' does not exist in project '{1}'."
+msgstr "Förrådet '{0}' finns inte i projektet '{1}'."
+
+#: plugins/copr.py:515
+msgid ""
+"\n"
+"Available repositories: "
+msgstr ""
+"\n"
+"Tillgängliga förråd: "
+
+#: plugins/copr.py:517
+#, python-brace-format
+msgid ""
+"\n"
+"\n"
+"If you want to enable a non-default repository, use the following command:\n"
+"  'dnf copr enable {0} <repository>'\n"
+"But note that the installed repo file will likely need a manual modification."
+msgstr ""
+"\n"
+"\n"
+"Om man vill aktivera ett icke-standard-förråd använder man följande kommando:\n"
+"  ”dnf copr enable {0} <förråd>”\n"
+"Men observera att den installerade förrådsfilen sannolikt behöver en manuell justering."
+
+#: plugins/copr.py:523
+#, python-brace-format
+msgid "Project {0} does not exist."
+msgstr "Projektet {0} finns inte."
+
+#: plugins/copr.py:526
+#, python-brace-format
+msgid "Failed to connect to {0}: {1}"
+msgstr "Misslyckades att ansluta till {0}:{1}"
+
+#: plugins/copr.py:573
+#, python-brace-format
+msgid ""
+"Maintainer of the enabled Copr repository decided to make\n"
+"it dependent on other repositories. Such repositories are\n"
+"usually necessary for successful installation of RPMs from\n"
+"the main Copr repository (they provide runtime dependencies).\n"
+"\n"
+"Be aware that the note about quality and bug-reporting\n"
+"above applies here too, Fedora Project doesn't control the\n"
+"content. Please review the list:\n"
+"\n"
+"{0}\n"
+"\n"
+"These repositories have been enabled automatically."
+msgstr ""
+"Administratören av det aktiverade Copr-förrådet beslutade att\n"
+"göra det beroende på andra förråd. Sådana förråd är vanligen\n"
+"nödvändiga för en lyckad installation av RPM:er från huvud-\n"
+"Copr-förrådet (de tillhandahåller körtidsberoenden).\n"
+"\n"
+"Var medveten om att kommentaren om kvalitet och\n"
+"felrapportering ovan gäller även här, Fedoraprojektet\n"
+"styr inte innehållet. Granska listan:\n"
+"\n"
+"{0}\n"
+"\n"
+"Dessa förråd har aktiverats automatiskt."
+
+#: plugins/copr.py:594
+msgid "Do you want to keep them enabled?"
+msgstr "Vill du behålla dem aktiverade?"
+
+#: plugins/copr.py:627
+#, python-brace-format
+msgid "Failed to remove copr repo {0}/{1}/{2}"
+msgstr "Misslyckades att ta bort copr-förrpdet {0}/{1}/{2}"
+
+#: plugins/copr.py:638
+msgid "Failed to disable copr repo {}/{}"
+msgstr "Misslyckades att avaktivera copr-förrådet {}/{}"
+
+#: plugins/copr.py:656 plugins/copr.py:693
+msgid "Unknown response from server."
+msgstr "Okänt svar från servern."
+
+#: plugins/copr.py:678
+msgid "Interact with Playground repository."
+msgstr "Interagera med Playground-förrådet."
+
+#: plugins/copr.py:684
+msgid "Enabling a Playground repository."
+msgstr "Aktiverin av ett Playground-förråd."
+
+#: plugins/copr.py:685
+msgid "Do you want to continue?"
+msgstr "Vill du fortsätta?"
+
+#: plugins/copr.py:729
+msgid "Playground repositories successfully enabled."
+msgstr "Playground-förråden aktiverades."
+
+#: plugins/copr.py:732
+msgid "Playground repositories successfully disabled."
+msgstr "Playground-förråden avaktiverades."
+
+#: plugins/copr.py:736
+msgid "Playground repositories successfully updated."
+msgstr "Playground-förråden uppdaterades."
+
+#: plugins/debug.py:53
+msgid "dump information about installed rpm packages to file"
+msgstr "skriv ut information om installerade rpm-paket till en fil"
+
+#: plugins/debug.py:67
+msgid "do not attempt to dump the repository contents."
+msgstr "försök inte skriva ut förrådets innehåll."
+
+#: plugins/debug.py:70
+msgid "optional name of dump file"
+msgstr "frivilligt namn på utskriftsfilen"
+
+#: plugins/debug.py:95
+#, python-format
+msgid "Output written to: %s"
+msgstr "Utdata skriven till: %s"
+
+#: plugins/debug.py:172
+msgid "restore packages recorded in debug-dump file"
+msgstr "återställ paket uppskrivna i en felsökningsutskriftsfil"
+
+#: plugins/debug.py:185
+msgid "output commands that would be run to stdout."
+msgstr "skriv ut kommandon som skulle körts till standard ut."
+
+#: plugins/debug.py:188
+msgid "Install the latest version of recorded packages."
+msgstr "Installera den senaste versionen av de uppskrivna paketen."
+
+#: plugins/debug.py:191
+msgid ""
+"Ignore architecture and install missing packages matching the name, epoch, "
+"version and release."
+msgstr ""
+"Ignorera arkitektur och installera saknade paket som matchar namnet, epoken,"
+" versionen och utgåvan."
+
+#: plugins/debug.py:196
+msgid "limit to specified type"
+msgstr "begränsa till viss typ"
+
+#: plugins/debug.py:199
+msgid ""
+"Allow removing of install-only packages. Using this option may result in an "
+"attempt to remove the running kernel."
+msgstr ""
+"Tillåt att paket som endast installeras tas bort. Att använda denna flagga "
+"kan resultera i ett försök att ta bort den körande kärnan."
+
+#: plugins/debug.py:202
+msgid "name of dump file"
+msgstr "namn på utskriftsfilen"
+
+#: plugins/debug.py:273
+#, python-format
+msgid "Package %s is not available"
+msgstr "Paketet %s är inte tillgängligt"
+
+#: plugins/debug.py:283
+#, python-format
+msgid "Bad dnf debug file: %s"
+msgstr "Felaktig dnf-felsökningsfil: %s"
+
+#: plugins/debuginfo-install.py:56
+msgid "install debuginfo packages"
+msgstr "installera debuginfo-paket"
+
+#: plugins/debuginfo-install.py:180
+#, python-format
+msgid ""
+"Could not find debuginfo package for the following available packages: %s"
+msgstr "Kunde inte hitta debuginfo-paket för följande tillgängliga paket: %s"
+
+#: plugins/debuginfo-install.py:185
+#, python-format
+msgid ""
+"Could not find debugsource package for the following available packages: %s"
+msgstr ""
+"Kunde inte hitta debugsource-paket för följande tillgängliga paket: %s"
+
+#: plugins/debuginfo-install.py:190
+#, python-format
+msgid ""
+"Could not find debuginfo package for the following installed packages: %s"
+msgstr "Kunde inte hitta debuginfo-paket för följande installerade paket: %s"
+
+#: plugins/debuginfo-install.py:195
+#, python-format
+msgid ""
+"Could not find debugsource package for the following installed packages: %s"
+msgstr ""
+"Kunde inte hitta debugsource-paket för följande installerade paket: %s"
+
+#: plugins/debuginfo-install.py:199
+msgid "Unable to find a match"
+msgstr "Kunde inte hitta en matchning"
+
+#: plugins/download.py:41
+msgid "Download package to current directory"
+msgstr "Hämta ett paket till aktuell katalog"
+
+#: plugins/download.py:51
+msgid "packages to download"
+msgstr "paket att hämta"
+
+#: plugins/download.py:53
+msgid "download the src.rpm instead"
+msgstr "hämta källkods-rpm:en istället"
+
+#: plugins/download.py:55
+msgid "download the -debuginfo package instead"
+msgstr "hämta debuginfo-paketet istället"
+
+#: plugins/download.py:57
+msgid "download the -debugsource package instead"
+msgstr "hämta -debugsource-paketet istället"
+
+#: plugins/download.py:60
+msgid "limit  the  query to packages of given architectures."
+msgstr "begränsa frågan till paket av den angivna arkitekturen."
+
+#: plugins/download.py:62 plugins/modulesync.py:51
+msgid "resolve and download needed dependencies"
+msgstr "lös upp och hämta de nödvändiga beroendena"
+
+#: plugins/download.py:64
+msgid ""
+"when running with --resolve, download all dependencies (do not exclude "
+"already installed ones)"
+msgstr ""
+"när man kör med --resolve, hämta alla beroenden (exkludera inte de som redan"
+" är installerade)"
+
+#: plugins/download.py:67
+msgid ""
+"print list of urls where the rpms can be downloaded instead of downloading"
+msgstr ""
+"skriv en lista på url:ar rpm:erna kan hämtas ifrån istället för att hämta "
+"dem"
+
+#: plugins/download.py:72
+msgid "when running with --url, limit to specific protocols"
+msgstr "när använt med --url, begränsa till specifika protokoll"
+
+#: plugins/download.py:121 plugins/reposync.py:327
+#, python-format
+msgid "Failed to get mirror for package: %s"
+msgstr "Misslyckades att få tag i spegeln för paket: %s"
+
+#: plugins/download.py:243
+msgid "Exiting due to strict setting."
+msgstr "Avslutar på grund av strict-inställning."
+
+#: plugins/download.py:261
+msgid "Error in resolve of packages:"
+msgstr "Fel i upplösningen av paket:"
+
+#: plugins/download.py:279
+#, python-format
+msgid "No source rpm defined for %s"
+msgstr "Ingen källkods-rpm definierad för %s"
+
+#: plugins/download.py:296 plugins/download.py:309
+#, python-format
+msgid "No package %s available."
+msgstr "Inget paket %s tillgängligt."
+
+#: plugins/groups_manager.py:49
+msgid "Invalid group id"
+msgstr "Ogiltigt grupp id"
+
+#: plugins/groups_manager.py:58
+msgid "Invalid translated data, should be in form 'lang:text'"
+msgstr "Felaktiga översatta data, skall vara på formen ”språk:text”"
+
+#: plugins/groups_manager.py:61
+msgid "Invalid/empty language for translated data"
+msgstr "Felaktigt/tomt språk för översatta data"
+
+#: plugins/groups_manager.py:71
+msgid "Can't generate group id from '{}'. Please specify group id using --id."
+msgstr "Kan inte generera grupp-id från ”{}”, Ange grupp-id med --id."
+
+#: plugins/groups_manager.py:79
+msgid "create and edit groups metadata file"
+msgstr "skapa och redigera en gruppmetadatafil"
+
+#: plugins/groups_manager.py:90
+msgid "load groups metadata from file"
+msgstr "läs in gruppmetadata från fil"
+
+#: plugins/groups_manager.py:93
+msgid "save groups metadata to file"
+msgstr "spara gruppmetadata till fil"
+
+#: plugins/groups_manager.py:95
+msgid "load and save groups metadata to file"
+msgstr "läs in och spara gruppmetadata till fil"
+
+#: plugins/groups_manager.py:97
+msgid "print the result metadata to stdout"
+msgstr "skriv ut resultatmetadata till standard ut"
+
+#: plugins/groups_manager.py:100
+msgid "group id"
+msgstr "grupp-id"
+
+#: plugins/groups_manager.py:101
+msgid "group name"
+msgstr "gruppnamn"
+
+#: plugins/groups_manager.py:103
+msgid "group description"
+msgstr "grupp beskrivning"
+
+#: plugins/groups_manager.py:105
+msgid "group display order"
+msgstr "gruppvisningsordning"
+
+#: plugins/groups_manager.py:108
+msgid "translated name for the group"
+msgstr "översatt namn för gruppen"
+
+#: plugins/groups_manager.py:111
+msgid "translated description for the group"
+msgstr "översatt beskrivning för gruppen"
+
+#: plugins/groups_manager.py:115
+msgid "make the group user visible (default)"
+msgstr "gör gruppen synlig för användare (standard)"
+
+#: plugins/groups_manager.py:118
+msgid "make the group user invisible"
+msgstr "gör gruppen osynlig för användare"
+
+#: plugins/groups_manager.py:123
+msgid "add packages to the mandatory section"
+msgstr "lägg till paket till det obligatoriska avsnittet"
+
+#: plugins/groups_manager.py:125
+msgid "add packages to the optional section"
+msgstr "lägg till paket till det valfria avsnittet"
+
+#: plugins/groups_manager.py:127
+msgid "remove packages from the group instead of adding them"
+msgstr "ta bort paket från gruppen istället för att lägga till dem"
+
+#: plugins/groups_manager.py:129
+msgid "include also direct dependencies for packages"
+msgstr "inkludera även direkta beroenden för paket"
+
+#: plugins/groups_manager.py:132
+msgid "package specification"
+msgstr "paketspecifikation"
+
+#: plugins/groups_manager.py:156
+msgid "Can't edit group without specifying it (use --id or --name)"
+msgstr ""
+"Det går inte att redigera en grupp utan att specificera den (använd --id "
+"eller --name)"
+
+#: plugins/groups_manager.py:190
+msgid "Can't load file \"{}\": {}"
+msgstr "Kan inte läsa in filen ”{}”: {}"
+
+#: plugins/groups_manager.py:206
+msgid "Can't save file \"{}\": {}"
+msgstr "Kan inte spara filen ”{}”: {}"
+
+#: plugins/groups_manager.py:261
+msgid "No match for argument: {}"
+msgstr "Ingen matchning för argumentet: {}"
+
+#: plugins/groups_manager.py:298
+msgid "Can't remove packages from non-existent group"
+msgstr "Det går inte att ta bort paket från en grupp som inte finns"
+
+#: plugins/groups_manager.py:307
+msgid ""
+"Group id '{}' generated from '{}' is duplicit. Please specify group id using"
+" --id."
+msgstr ""
+"Grupp-id ”{}” genererat från ”{}” är en dublett. Ange grupp-id med --id."
+
+#: plugins/leaves.py:32
+msgid "List installed packages not required by any other package"
+msgstr "Lista installerade paket som inte behövs av något annat paket"
+
+#: plugins/local.py:122
+msgid "Unable to create a directory '{}' due to '{}'"
+msgstr "Kan inte skapa en katalog ”{}” på grund av ”{}”"
+
+#: plugins/local.py:126
+msgid "'{}' is not a directory"
+msgstr "”{}” är inte en katalog"
+
+#: plugins/local.py:135
+msgid "Copying '{}' to local repo"
+msgstr "Kopierar ”{}” till lokalt förråd"
+
+#: plugins/local.py:141
+msgid "Can't write file '{}'"
+msgstr "Kan inte skriva filen ”{}”"
+
+#: plugins/local.py:156
+msgid "Rebuilding local repo"
+msgstr "Bygger om lokalt förråd"
+
+#: plugins/migrate.py:45
+msgid "migrate yum's history, group and yumdb data to dnf"
+msgstr "migrera yums historie-, grupp- och yumdb-data till dnf"
+
+#: plugins/migrate.py:54
+msgid "Migrating history data..."
+msgstr "Migrerar historiedata …"
+
+#: plugins/modulesync.py:37
+msgid ""
+"Download packages from modules and/or create a repository with modular data"
+msgstr ""
+"Ladda ner paket från moduler och/eller skapa ett förråd med modulär data"
+
+#: plugins/modulesync.py:44
+msgid "MODULE"
+msgstr "MODUL"
+
+#: plugins/modulesync.py:45
+msgid "modules to download"
+msgstr "moduler att hämta"
+
+#: plugins/modulesync.py:47
+msgid "enable repositories with source packages"
+msgstr "aktivera förråd med källkodspaket"
+
+#: plugins/modulesync.py:49
+msgid "enable repositories with debug-info and debug-source packages"
+msgstr "aktivera förråd med debug-info och debug-source-paket"
+
+#: plugins/modulesync.py:53
+msgid "download only packages from newest modules"
+msgstr "hämta endast paket från de senaste modulerna"
+
+#: plugins/modulesync.py:85
+msgid "Unable to find a match for argument: '{}'"
+msgid_plural "Unable to find a match for arguments: '{}'"
+msgstr[0] "Det gick inte att hitta en matchning för argument: '{}'"
+msgstr[1] "Det gick inte att hitta en matchning för argument: '{}'"
+
+#: plugins/modulesync.py:107
+msgid ""
+"Creation of repository failed with return code {}. All downloaded content "
+"was kept on the system"
+msgstr ""
+"Skapandet av förråd misslyckades med returkoden {}. Allt nedladdat innehåll "
+"behölls på systemet"
+
+#: plugins/modulesync.py:144
+#, python-brace-format
+msgid "No match for artifact '{0}' from module '{1}'"
+msgstr "Ingen matchning för artefakten '{0}' från modulen '{1}'"
+
+#: plugins/modulesync.py:162
+#, python-brace-format
+msgid "No match for package name '{0}' in profile {1} from module {2}"
+msgstr "Ingen matchning för paketnamnet '{0}' i profilen {1} från modul {2}"
+
+#: plugins/modulesync.py:166
+msgid "No mach for argument '{}'"
+msgstr "Ingen matchning för argumentet '{}'"
+
+#. TODO(jmracek) Shell we end with an error or with RC 1?
+#: plugins/modulesync.py:198
+msgid "Unable to satisfy require {}"
+msgstr "Kan inte uppfylla kravet {}"
+
+#: plugins/needs_restarting.py:68
+#, python-brace-format
+msgid ""
+"No installed package found for package name \"{pkg}\" specified in needs-"
+"restarting file \"{file}\"."
+msgstr ""
+"Inget installerat paket finns för paketnamnet ”{pkg}” som angetts i filen "
+"”{file}” för behov av omstart."
+
+#: plugins/needs_restarting.py:256
+msgid "determine updated binaries that need restarting"
+msgstr "avgör vilka uppdaterade binärer som behöver startas om"
+
+#: plugins/needs_restarting.py:261
+msgid "only consider this user's processes"
+msgstr "betrakta endast denna användares processer"
+
+#: plugins/needs_restarting.py:263
+msgid ""
+"only report whether a reboot is required (exit code 1) or not (exit code 0)"
+msgstr ""
+"rapportera endast huruvida en omstart behövs (slutkod 1) eller inte (slutkod"
+" 0)"
+
+#: plugins/needs_restarting.py:266
+msgid "only report affected systemd services"
+msgstr "rapportera endast påverkade systemd-tjänster"
+
+#: plugins/needs_restarting.py:289
+msgid "Core libraries or services have been updated since boot-up:"
+msgstr "Kärnbibliotek och -tjänster har uppdaterats sedan uppstart:"
+
+#: plugins/needs_restarting.py:294
+msgid "Reboot is required to fully utilize these updates."
+msgstr "En omstart behövs för att helt utnyttja dessa uppdateringar."
+
+#: plugins/needs_restarting.py:295
+msgid "More information:"
+msgstr "Mer information:"
+
+#: plugins/needs_restarting.py:299
+msgid "No core libraries or services have been updated since boot-up."
+msgstr "Inga kärnbibliotek eller -tjänster har uppdaterats sedan uppstart."
+
+#: plugins/needs_restarting.py:301
+msgid "Reboot should not be necessary."
+msgstr "En omstart skall inte behövas."
+
+#: plugins/post-transaction-actions.py:71
+#, python-format
+msgid "Bad Action Line \"%s\": %s"
+msgstr "Felaktig åtgärdsrad ”%s”: %s"
+
+#. unsupported state, skip it
+#: plugins/post-transaction-actions.py:133
+#, python-format
+msgid "Bad Transaction State: %s"
+msgstr "Felaktigt transaktionstillstånd: %s"
+
+#: plugins/post-transaction-actions.py:160
+#: plugins/post-transaction-actions.py:162
+#, python-format
+msgid "post-transaction-actions: %s"
+msgstr "post-transaktionsåtgärder: %s"
+
+#: plugins/post-transaction-actions.py:164
+#, python-format
+msgid "post-transaction-actions: Bad Command \"%s\": %s"
+msgstr "post-transaktionsåtgärder: Felaktigt kommando ”%s”: %s"
+
+#: plugins/repoclosure.py:42
+msgid "Display a list of unresolved dependencies for repositories"
+msgstr "Visa en lista över olösta beroenden för förråd"
+
+#: plugins/repoclosure.py:69
+msgid ""
+"Repoclosure ended with unresolved dependencies ({}) across {} packages."
+msgstr "Förrådshöljet slutade med olösta beroenden. ({}) över {} paket."
+
+#: plugins/repoclosure.py:159
+msgid "check packages of the given archs, can be specified multiple times"
+msgstr "kontrollera paket på den givna arkitekturen, kan anges flera gånger"
+
+#: plugins/repoclosure.py:162
+msgid "Specify repositories to check"
+msgstr "Ange förråd att kontrollera"
+
+#: plugins/repoclosure.py:164
+msgid "Check only the newest packages in the repos"
+msgstr "Kontrollera endast de nyaste paketen i förrådet"
+
+#: plugins/repoclosure.py:167
+msgid "Check closure for this package only"
+msgstr "Kontrollera endast höljet för detta paket"
+
+#: plugins/repodiff.py:45
+msgid "List differences between two sets of repositories"
+msgstr "Lista skillnader mellan två uppsättningar förråd"
+
+#: plugins/repodiff.py:58
+msgid "Specify old repository, can be used multiple times"
+msgstr "Ange ett gammalt förråd, kan användas flera gånger"
+
+#: plugins/repodiff.py:60
+msgid "Specify new repository, can be used multiple times"
+msgstr "Ange ett nytt förråd, kan användas flera gånger"
+
+#: plugins/repodiff.py:63
+msgid ""
+"Specify architectures to compare, can be used multiple times. By default, "
+"only source rpms are compared."
+msgstr ""
+"Ange arkitekturer att jämföra, kan användas flera gånger. Som standard "
+"jämförs endast källkods-rpm:er."
+
+#: plugins/repodiff.py:67
+msgid "Output additional data about the size of the changes."
+msgstr "Skriv ut ytterligare data om storleken på ändringarna."
+
+#: plugins/repodiff.py:69
+msgid ""
+"Compare packages also by arch. By default packages are compared just by "
+"name."
+msgstr "Jämför paket efter arkitektur."
+
+#: plugins/repodiff.py:72
+msgid "Output a simple one line message for modified packages."
+msgstr "Skriv ut ett enkelt enradsmeddelande för ändrade paket."
+
+#: plugins/repodiff.py:74
+msgid ""
+"Split the data for modified packages between upgraded and downgraded "
+"packages."
+msgstr ""
+"Dela upp data för modifierade paket mellan uppgraderade och nedgraderade "
+"paket."
+
+#: plugins/repodiff.py:86
+msgid "Both old and new repositories must be set."
+msgstr "Både gamla och nya förråd måste anges."
+
+#: plugins/repodiff.py:178
+msgid "Size change: {} bytes"
+msgstr "Storleksändring: {} byte"
+
+#: plugins/repodiff.py:184
+msgid "Added package  : {}"
+msgstr "Tillagt paket: {}"
+
+#: plugins/repodiff.py:187
+msgid "Removed package: {}"
+msgstr "Borttaget paket: {}"
+
+#: plugins/repodiff.py:190
+msgid "Obsoleted by   : {}"
+msgstr "Fasas ut av: {}"
+
+#: plugins/repodiff.py:195
+msgid ""
+"\n"
+"Upgraded packages"
+msgstr ""
+"\n"
+"Uppgraderade paket"
+
+#: plugins/repodiff.py:200
+msgid ""
+"\n"
+"Downgraded packages"
+msgstr ""
+"\n"
+"Nedgraderade paket"
+
+#: plugins/repodiff.py:207
+msgid ""
+"\n"
+"Modified packages"
+msgstr ""
+"\n"
+"Modifierade paket"
+
+#: plugins/repodiff.py:212
+msgid ""
+"\n"
+"Summary"
+msgstr ""
+"\n"
+"Sammanfattning"
+
+#: plugins/repodiff.py:213
+msgid "Added packages: {}"
+msgstr "Tillagda paket: {}"
+
+#: plugins/repodiff.py:214
+msgid "Removed packages: {}"
+msgstr "Borttagna paket: {}"
+
+#: plugins/repodiff.py:216
+msgid "Upgraded packages: {}"
+msgstr "Uppgraderade paket: {}"
+
+#: plugins/repodiff.py:217
+msgid "Downgraded packages: {}"
+msgstr "Nedgraderade paket: {}"
+
+#: plugins/repodiff.py:219
+msgid "Modified packages: {}"
+msgstr "Modifierade paket: {}"
+
+#: plugins/repodiff.py:222
+msgid "Size of added packages: {}"
+msgstr "Storlek på tillagda paket: {}"
+
+#: plugins/repodiff.py:223
+msgid "Size of removed packages: {}"
+msgstr "Storlek på borttagna paket: {}"
+
+#: plugins/repodiff.py:225
+msgid "Size of modified packages: {}"
+msgstr "Storlek på modifierade paket: {}"
+
+#: plugins/repodiff.py:228
+msgid "Size of upgraded packages: {}"
+msgstr "Storlek på uppgraderade paket: {}"
+
+#: plugins/repodiff.py:230
+msgid "Size of downgraded packages: {}"
+msgstr "Storlek på nedgraderade paket: {}"
+
+#: plugins/repodiff.py:232
+msgid "Size change: {}"
+msgstr "Storleksändring: {}"
+
+#: plugins/repograph.py:50
+msgid "Output a full package dependency graph in dot format"
+msgstr "Mata ut en fullständig paketberoendegraf i dot-format"
+
+#: plugins/repograph.py:110
+#, python-format
+msgid "Nothing provides: '%s'"
+msgstr "Inget tillhandahåller: ”%s”"
+
+#: plugins/repomanage.py:45
+msgid "Manage a directory of rpm packages"
+msgstr "Hantera en katalog med rpm-paket"
+
+#: plugins/repomanage.py:59
+msgid "Pass either --old or --new, not both!"
+msgstr "Skicka antingen --old eller --new, inte båda!"
+
+#: plugins/repomanage.py:61
+msgid "Pass either --oldonly or --new, not both!"
+msgstr "Skicka antingen --oldonly eller --new, inte båda!"
+
+#: plugins/repomanage.py:63
+msgid "Pass either --old or --oldonly, not both!"
+msgstr "Skicka antingen --old eller --oldonly, inte båda!"
+
+#: plugins/repomanage.py:100
+msgid "No files to process"
+msgstr "Inga filer att behandla"
+
+#: plugins/repomanage.py:107
+msgid "Could not open {}"
+msgstr "Kunde inte öppna {}"
+
+#: plugins/repomanage.py:223
+msgid "Print the older packages"
+msgstr "Skriv de äldre paketen"
+
+#: plugins/repomanage.py:225
+msgid "Print the older packages. Exclude the newest packages."
+msgstr "Skriv ut de äldre paketen. Uteslut de senaste paketen."
+
+#: plugins/repomanage.py:227
+msgid "Print the newest packages"
+msgstr "Skriv de senaste paketen"
+
+#: plugins/repomanage.py:229
+msgid "Space separated output, not newline"
+msgstr "Mellanslagsseparerad utdata, inte nyrader"
+
+#: plugins/repomanage.py:231
+msgid "Newest N packages to keep - defaults to 1"
+msgstr "N nyaste paket att behålla, 1 som standard"
+
+#: plugins/repomanage.py:234
+msgid "Path to directory"
+msgstr "Sökväg till katalogen"
+
+#: plugins/reposync.py:55
+msgid "download all packages from remote repo"
+msgstr "hämta alla paket från fjärrförrådet"
+
+#: plugins/reposync.py:64
+msgid "download only packages for this ARCH"
+msgstr "hämta endast paket för denna ARK"
+
+#: plugins/reposync.py:66
+msgid "delete local packages no longer present in repository"
+msgstr "ta bort lokala paket som inte finns i förrådet längre"
+
+#: plugins/reposync.py:68
+msgid "download all the metadata."
+msgstr "hämta all metadatan."
+
+#: plugins/reposync.py:70
+msgid "Remove packages that fail GPG signature checking after downloading"
+msgstr ""
+"Ta bort paket vars kontroll av GPG-signaturen misslyckas efter att ha "
+"hämtats"
+
+#: plugins/reposync.py:73
+msgid "also download and uncompress comps.xml"
+msgstr "hämta även och dekomprimera comps.xml"
+
+#: plugins/reposync.py:75
+msgid ""
+"where to store downloaded repository metadata. Defaults to the value of "
+"--download-path."
+msgstr ""
+"var hämtad förrådsmetadata skall lagras. Standard är värdet på --download-"
+"path."
+
+#: plugins/reposync.py:78
+msgid "download only newest packages per-repo"
+msgstr "hämta endast de nyaste paketen per förråd"
+
+#: plugins/reposync.py:80
+msgid "Don't add the reponame to the download path."
+msgstr "Lägg iinte till förrådsnamnet till hämtningssökvägen."
+
+#: plugins/reposync.py:82
+msgid "where to store downloaded repositories"
+msgstr "var hämtade förråd skall lagras"
+
+#: plugins/reposync.py:84
+msgid "try to set local timestamps of local files by the one on the server"
+msgstr ""
+"försök att sätta lokala tidsstämplar på lokala filer från den på servern"
+
+#: plugins/reposync.py:87
+msgid "download only source packages"
+msgstr "hämta endast källkodspaket"
+
+#: plugins/reposync.py:89
+msgid "Just list urls of what would be downloaded, don't download"
+msgstr "Lista bara url:ar till vad som skulle hämtats, hämta inte"
+
+#: plugins/reposync.py:92
+msgid ""
+"Filesystem path that is considered safe for writing. Defaults to download "
+"path."
+msgstr ""
+"Filsystemssökväg som anses säker att skriva till. Som standard sökvägen att "
+"hämta till."
+
+#: plugins/reposync.py:119
+msgid "Can't use --norepopath with multiple repositories"
+msgstr "Det går inte att använda --norepopath med multipla förråd"
+
+#: plugins/reposync.py:122
+msgid "Can't use --safe-write-path with multiple repositories"
+msgstr "Det går inte att använda --safe-write-path med multipla förråd"
+
+#: plugins/reposync.py:141
+#, python-format
+msgid "Failed to get mirror for metadata: %s"
+msgstr "Misslyckades att få tag i spegeln för metadata: %s"
+
+#: plugins/reposync.py:158
+msgid "Failed to get mirror for the group file."
+msgstr "Misslyckades att få tag i spegeln för gruppfilen."
+
+#: plugins/reposync.py:177
+msgid "Removing {}: {}"
+msgstr "Tar bort {}: {}"
+
+#: plugins/reposync.py:184
+msgid "GPG signature check failed."
+msgstr "GPG-signaturkontrollen misslyckades."
+
+#: plugins/reposync.py:208
+#, python-brace-format
+msgid ""
+"Download target '{0}' for location '{1}' of '{2}' package is outside of safe"
+" write path '{3}'."
+msgstr ""
+"Hämtningsmålet ”{0}” för platsen ”{1}” för paketet ”{2}” är utanför den "
+"skrivsäkra sökvägen ”{3}”."
+
+#: plugins/reposync.py:224
+#, python-format
+msgid "[DELETED] %s"
+msgstr "[BORTTAGEN] %s"
+
+#: plugins/reposync.py:226
+#, python-format
+msgid "failed to delete file %s"
+msgstr "kunde inte ta bort filen %s"
+
+#: plugins/reposync.py:235
+#, python-format
+msgid "comps.xml for repository %s saved"
+msgstr "comps.xml för förrådet %s sparad"
+
+#: plugins/show_leaves.py:54
+msgid "New leaves:"
+msgstr "Nya löv:"
+
+#. Translators: This string is only used in unit tests.
+#: plugins/system_upgrade.py:45
+msgid "the color of the sky"
+msgstr "färgen på himlen"
+
+#: plugins/system_upgrade.py:57
+msgid "Need a --releasever greater than the current system version."
+msgstr "Behöver en -releasever större än den nuvarande systemversionen."
+
+#. Translators: do not change "reboot" here
+#: plugins/system_upgrade.py:59
+#, python-brace-format
+msgid ""
+"Download complete! Use 'dnf {command} reboot' to start the upgrade.\n"
+"To remove cached metadata and transaction use 'dnf {command} clean'"
+msgstr ""
+"Nerladdning slutförd! Använd 'dnf{command} reboot för att starta uppgraderingen.\n"
+"För att ta bort cachad metada och transaktioner använd 'dnf {command} clean'"
+
+#: plugins/system_upgrade.py:62
+msgid "Sorry, you need to use 'download --releasever' instead of '--network'"
+msgstr ""
+"Förlåt, du måste använda 'download --releasever' istället för '--network'"
+
+#: plugins/system_upgrade.py:71
+msgid "Reboot turned off, not rebooting."
+msgstr "Omstart avstängd, startar inte om."
+
+#: plugins/system_upgrade.py:125
+#, python-format
+msgid "Screen blanking can't be disabled: %s"
+msgstr "Skärmsblanking kan inte inaktiveras: %s"
+
+#: plugins/system_upgrade.py:145
+#, python-format
+msgid "Failed loading state file: %s, continuing with empty state."
+msgstr ""
+"Misslyckades att ladda tillståndsfil: %s, fortsätter med tomt tillstånd."
+
+#: plugins/system_upgrade.py:293
+msgid "The following boots appear to contain upgrade logs:"
+msgstr "Följande uppstarter verkar innehålla uppgraderingsloggar:"
+
+#: plugins/system_upgrade.py:303
+msgid "-- no logs were found --"
+msgstr "-- inga loggar hittades --"
+
+#: plugins/system_upgrade.py:318
+msgid "Cannot find logs with this index."
+msgstr "Kan inte hitta loggar med detta index."
+
+#: plugins/system_upgrade.py:327
+msgid "Unable to match systemd journal entry"
+msgstr "Kunde inte matcha systemd journalinmatning"
+
+#: plugins/system_upgrade.py:348
+msgid "Prepare system for upgrade to a new release"
+msgstr "Förbered systemet för uppgradering till en ny utgåva"
+
+#: plugins/system_upgrade.py:364
+msgid "keep installed packages if the new release's version is older"
+msgstr "behåll installerade paket om den nya versionens version är äldre"
+
+#: plugins/system_upgrade.py:368
+msgid "power off system after the operation is completed"
+msgstr "stäng av systemet efter att operationen är klar"
+
+#: plugins/system_upgrade.py:372
+msgid "which logs to show"
+msgstr "vilka loggar att visa"
+
+#: plugins/system_upgrade.py:406
+#, python-brace-format
+msgid "Incompatible version of data. Rerun 'dnf {command} download [OPTIONS]'"
+msgstr ""
+"Inkompatibel version av data. Kör om 'dnf {command} download [ALTERNATIV]'"
+
+#: plugins/system_upgrade.py:442
+msgid "Command 'offline-distrosync' cannot be used with --no-downgrade option"
+msgstr ""
+"Kommandot 'offline-distrosync' kan inte användas med --no-downgrade "
+"alternativ"
+
+#: plugins/system_upgrade.py:464
+msgid "Additional information for System Upgrade: {}"
+msgstr "Ytterligare information för systemuppgradering: {}"
+
+#: plugins/system_upgrade.py:467
+msgid ""
+"Before you continue ensure that your system is fully upgraded by running "
+"\"dnf --refresh upgrade\". Do you want to continue"
+msgstr ""
+"Innan du fortsätter se till att ditt system är helt uppgraderat genom att "
+"köra \"dnf --refresh upgrade\". Vill du fortsätta"
+
+#: plugins/system_upgrade.py:471
+msgid "Operation aborted."
+msgstr "Operation avbryten."
+
+#: plugins/system_upgrade.py:532
+msgid "system is not ready for upgrade"
+msgstr "system är inte redo för uppgradering"
+
+#: plugins/system_upgrade.py:535
+#, python-brace-format
+msgid ""
+"the transaction was not prepared for '{command}'. Rerun 'dnf {command} "
+"download [OPTIONS]'"
+msgstr ""
+"transaktionen var inte förberedd för '{command}'. Kör om 'dnf {command} "
+"download [alternativ]'"
+
+#: plugins/system_upgrade.py:539
+msgid "upgrade is already scheduled"
+msgstr "uppgradering är redan schemalagd"
+
+#: plugins/system_upgrade.py:545
+msgid "trigger file does not exist. exiting quietly."
+msgstr "Trigger-fil existerar inte. avslutar tyst."
+
+#: plugins/system_upgrade.py:548
+msgid "another upgrade tool is running. exiting quietly."
+msgstr "ett annat uppgraderingsverktyg körs redan. avslutar tyst."
+
+#: plugins/system_upgrade.py:557
+#, python-brace-format
+msgid "use 'dnf {command} reboot' to begin the upgrade"
+msgstr "Använd 'dnf {command} reboot' för att påbörja uppgradering"
+
+#: plugins/system_upgrade.py:577
+msgid "Rebooting to perform upgrade."
+msgstr "Startar om för att utföra uppgradering."
+
+#: plugins/system_upgrade.py:613
+msgid "Starting offline upgrade. This will take a while."
+msgstr "Startar offlineuppgradering. Detta kommer ta ett tag."
+
+#: plugins/system_upgrade.py:615
+msgid "Starting offline distrosync. This will take a while."
+msgstr "Startar offline distrosynkronisering. Detta kommer ta ett tag."
+
+#: plugins/system_upgrade.py:617
+msgid "Starting system upgrade. This will take a while."
+msgstr "Startar systemuppgradering. Detta kommer ta ett tag."
+
+#: plugins/system_upgrade.py:633
+msgid "Cleaning up downloaded data..."
+msgstr "Rensar upp nerladdad data..."
+
+#: plugins/system_upgrade.py:663
+msgid ""
+"The system-upgrade transaction is empty, your system is already up-to-date."
+msgstr ""
+"system-uppgraderingstransaktionen är tom, ditt system är redan uppdaterat."
+
+#: plugins/system_upgrade.py:672
+msgid "Transaction saved to {}."
+msgstr "Transaktion sparad till {}."
+
+#: plugins/system_upgrade.py:675
+msgid "Error storing transaction: {}"
+msgstr "Fel vid lagring av transaktion: {}"
+
+#: plugins/system_upgrade.py:697
+msgid "Download finished."
+msgstr "Nerladdning slutförd."
+
+#: plugins/system_upgrade.py:701
+msgid "Upgrade complete! Cleaning up and powering off..."
+msgstr "Uppgraderingen är klar! Rensar upp och stänger av…"
+
+#: plugins/system_upgrade.py:703
+msgid "Upgrade complete! Cleaning up and rebooting..."
+msgstr "Uppgradering slutförd! Rensar upp och startar om..."
+
+#: plugins/system_upgrade.py:715
+msgid "Prepare offline upgrade of the system"
+msgstr "Förbered offline-uppgraderingen av systemet"
+
+#: plugins/system_upgrade.py:720
+msgid "Prepare offline distrosync of the system"
+msgstr "Förbered offline-distrosynkronisering av systemet"
+
+#: plugins/versionlock.py:33
+#, python-format
+msgid "Unable to read version lock configuration: %s"
+msgstr "Kan inte läsa versionslåsningskonfigurationen: %s"
+
+#: plugins/versionlock.py:34
+msgid "Locklist not set"
+msgstr "Låslista inte satt"
+
+#: plugins/versionlock.py:35
+msgid "Adding versionlock on:"
+msgstr "Lägger till versionslås på:"
+
+#: plugins/versionlock.py:36
+msgid "Adding exclude on:"
+msgstr "Lägger till uteslutande på:"
+
+#: plugins/versionlock.py:37
+msgid "Package already locked in equivalent form:"
+msgstr "Paketet är redan låst i likvärdig form:"
+
+#: plugins/versionlock.py:38
+msgid "Package {} is already locked"
+msgstr "Paketet {} är redan låst"
+
+#: plugins/versionlock.py:39
+msgid "Package {} is already excluded"
+msgstr "Paketet {} är redan uteslutet"
+
+#: plugins/versionlock.py:40
+msgid "Deleting versionlock for:"
+msgstr "Raderar versionslås för:"
+
+#: plugins/versionlock.py:41
+msgid "No package found for:"
+msgstr "Det finns inget paket för:"
+
+#: plugins/versionlock.py:42
+msgid "Excludes from versionlock plugin were not applied"
+msgstr "Uteslutanden från versionslås tillämpades inte"
+
+#: plugins/versionlock.py:43
+msgid "Versionlock plugin: number of lock rules from file \"{}\" applied: {}"
+msgstr ""
+"Insticksmodul för versionslås: antal låsregler från filen ”{}” verkställda: "
+"{}"
+
+#: plugins/versionlock.py:44
+msgid "Versionlock plugin: number of exclude rules from file \"{}\" applied: {}"
+msgstr ""
+"Insticksmodul för versionslås: antal uteslutningsregler från filen ”{}” "
+"verkställda: {}"
+
+#: plugins/versionlock.py:45
+msgid "Versionlock plugin: could not parse pattern:"
+msgstr "Insticksmodul för versionslås: kunde inte tolka mönstret:"
+
+#: plugins/versionlock.py:138
+msgid "control package version locks"
+msgstr "styr paketversionslås"
+
+#: plugins/versionlock.py:144
+msgid "Use package specifications as they are, do not try to parse them"
+msgstr "Använd paketspecifikationer som de är, försök inte att tolka dem"
+
+#: plugins/versionlock.py:164
+msgid "Subcommand '{}' is deprecated. Use 'exclude' subcommand instead."
+msgstr ""
+"Underkommandot ”{}” bör undvikas. Använd underkommandot ”exclude” istället."
+
+#~ msgid "repo to modify"
+#~ msgstr "förråd att ändra"
+
+#~ msgid ""
+#~ "WARNING: this operation is not supported on the RHEL distribution. Proceed "
+#~ "at your own risk."
+#~ msgstr ""
+#~ "VARNING: denna operation stöds inte på RHEL-distributionen. Fortsätt på egen"
+#~ " risk."
+
+#~ msgid ""
+#~ "This repository does not have any builds yet so you cannot enable it now."
+#~ msgstr ""
+#~ "Detta förråd har inte några byggen ännu så du kan inte aktivera det nu."
+
+#~ msgid ""
+#~ "\n"
+#~ "You are about to enable a Playground repository.\n"
+#~ "\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "\n"
+#~ "Du står i begrepp att aktivera ett Playground-förråd.\n"
+#~ "\n"
+#~ "Vill du fortsätta?"
+
+#~ msgid "also download comps.xml"
+#~ msgstr "hämta även comps.xml"
+
+#~ msgid "where to store downloaded repositories "
+#~ msgstr "var hämtade förråd skall sparas "
+
+#~ msgid "Could not make repository directory: %s"
+#~ msgstr "Kunde inte skapa förrådskatalogen: %s"
